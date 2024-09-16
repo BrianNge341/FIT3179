@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Visualization Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            border: none;
+            transition: box-shadow 0.3s;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px 12px 0 0;
+            font-size: 1.25rem;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        /* Map and Chart Heights */
+        #map_visualisation_population, #map_visual_vehicle {
+            height: 500px;
+        }
+
+        #bar_chart {
+            height: 400px;
+        }
+
+        .github-btn {
+            text-align: right;
+            margin-right: 15px;
+        }
+
+        .footer-text {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .text-justify p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        /* Adjust the spacing and padding for better layout */
+        .pt-5, .pb-5 {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+
+        .shadow-lg {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        .header-container {
+            margin-top: 20px; /* Adjust this value to control the space at the top */
+        }
+
+    </style>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const barChartSpec = "bar_chart.vg.json";
+            vegaEmbed('#bar_chart', barChartSpec, {
+                renderer: "svg",
+                actions: false
+            });
+
+            var vg_population = "visualisation/map_visualisation_population.vg.json";
+            vegaEmbed("#map_visualisation_population", vg_population, {
+                renderer: "svg",
+                actions: false
+            }).then(function(result) {
+            }).catch(console.error);
+
+            var vg_vehicle = "visualisation/map_visualisation_vehicle.vg.json";
+            vegaEmbed("#map_visual_vehicle", vg_vehicle, {
+                renderer: "svg",
+                actions: false
+            }).then(function(result) {
+            }).catch(console.error);
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid font-weight-light p-0">
+    <div class="row header-container">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg mb-4">
+                <div class="card-header bg-dark text-white">
+                    <div class="github-btn">
+                        <a aria-label="Follow on GitHub" class="github-button"
+                           data-size="large" href="https://github.com/BrianNge341/FIT3179">Visit Project</a>
+                    </div>
+                    <div class="text-center">
+                        <h1>Road Safety in Australian Capital Territory</h1>
+                        <h3>Analysis Based On Traffic Offences</h3>
+                    </div>
+                </div>
+                <div class="card-body align-content-center">
+                    <div class="row justify-content-center text-justify">
+                        <div class="col-10">
+                            <p>Road safety in the <b>Australian Capital Territory (ACT)</b> is a key concern for both local authorities and residents. 
+                            Traffic offences such as speeding, red light violations, and dangerous driving significantly impact public safety. 
+                            In recent years, targeted initiatives and traffic camera systems have been deployed to monitor and reduce such offences.</p>
+                            <p>This analysis explores trends in <b>traffic offences</b> and the associated penalties, shedding light on how 
+                            fines and enforcement measures have evolved to improve road safety. With an emphasis on data collected from various locations across the ACT, 
+                            this study examines the impact of these measures on reducing violations and promoting safer driving habits.</p>
+                        </div>
+                    </div>
+                </div>                                
+            </div>
+        </div>
+    </div>
+    <div class="row pt-3 pb-5">
+        <div class="col-12">
+            <div class="row justify-content-center pt-5 pb-5">
+                <div class="col-12">
+                    <div class="card border-0 shadow-lg mb-4">
+                        <div class="card-header text-center">
+                            Map
+                        </div>
+                        <div class="card-body visualization-container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="map_visualisation_population"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="map_visual_vehicle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-lg mb-4">
+                        <div class="card-header text-center">
+                            Bar Chart
+                        </div>
+                        <div class="card-body visualization-container">
+                            <div id="bar_chart"></div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-footer pb-0 text-center footer-text">
+                            <p><b>Cooper Corbett 2020</b> | FIT3179 - Data Visualisation 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

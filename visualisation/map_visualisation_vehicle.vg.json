@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A map visualization of vehicle registrations per state.",
+  "title": "Vehicle Registrations in Australia",
+  "width": 800,
+  "height": 500,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "data": {
+    "url": "data\\australia_map.topojson",
+    "format": {
+      "type": "topojson",
+      "feature": "collection"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      }
+    },
+    {
+      "data": {
+        "url": "datasource\\MotorRegistration.csv"
+      },
+      "transform": [
+        {
+          "lookup": "Rego_State",
+          "from": {
+            "data": {
+              "url": "data\\australia_map.topojson",
+              "format": {
+                "type": "topojson",
+                "feature": "collection"
+              }
+            },
+            "key": "properties.State_Name",
+            "fields": ["type", "geometry"]
+          }
+        }
+      ],
+      "mark": "geoshape",
+      "encoding": {
+        "color": {
+          "field": "Vehicle registrations",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "blues"
+          },
+          "legend": {
+            "title": "Vehicle Registrations"
+          }
+        },
+        "tooltip": [
+          {"field": "Rego_State", "type": "nominal", "title": "State"},
+          {"field": "Vehicle registrations", "type": "quantitative", "title": "Vehicle Registrations"}
+        ]
+      }
+    }
+  ]
+}
