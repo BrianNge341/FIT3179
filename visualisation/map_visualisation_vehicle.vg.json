@@ -9,7 +9,7 @@
     "contains": "padding"
   },
   "data": {
-    "url": "https://github.com/BrianNge341/FIT3179/blob/main/data/australia_map.topojson",
+    "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/data/australia_map.topojson",
     "format": {
       "type": "topojson",
       "feature": "collection"
