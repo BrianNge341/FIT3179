@@ -25,7 +25,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/datasource/OffencesMap.csv"
+        "url": "datasource\\OffencesMap.csv"
       },
       "transform": [
         {
@@ -61,7 +61,7 @@
           }
         },
         "tooltip": [
-          {"field": "Rego_State", "type": "nominal", "title": "State"},
+          {"field": "State", "type": "nominal", "title": "State"},
           {"field": "Sum of Sum_Inf_Count", "type": "quantitative", "title": "Infraction Count"},
           {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount"},
           {"field": "Population", "type": "quantitative", "title": "Population"},

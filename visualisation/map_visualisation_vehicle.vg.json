@@ -56,7 +56,7 @@
           }
         },
         "tooltip": [
-          {"field": "Rego_State", "type": "nominal", "title": "State"},
+          {"field": "State", "type": "nominal", "title": "State"},
           {"field": "Vehicle registrations", "type": "quantitative", "title": "Vehicle Registrations"}
         ]
       }
