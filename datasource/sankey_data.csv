@@ -1,0 +1,188 @@
+source,target,value
+Diplomatic,20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,80
+Diplomatic,20 Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,1
+Diplomatic,20 Non-School Zone Exceed Speed Limit By > 45 Km/H,2
+Diplomatic,20 Non-school zone exceed speed limit by <= 15km/h,1288
+Diplomatic,20 School Zone  Exceed Speed Limit By <= 15 Km/H,263
+Diplomatic,20 School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,24
+Diplomatic,300 (1) Driver using mobile device,51
+Diplomatic,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,86
+Diplomatic,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,30
+Diplomatic,Enter Intersection When Traffic Arrow Red,2
+Diplomatic,Enter Intersection When Traffic Light Red,2
+Diplomatic,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,71
+Diplomatic,Enter Intersection or Marked Foot Crossing When Traffic Light Red,251
+Diplomatic,Non-School Zone Exceed Speed Limit <= 15 Km/H,2211
+Diplomatic,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,259
+Diplomatic,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,16
+Diplomatic,Non-School Zone Exceed Speed Limit By > 45 Km/H,5
+Diplomatic,Non-school zone exceed speed limit by <= 15km/h,280
+Diplomatic,Proceed When Traffic Arrow Red,12
+Diplomatic,Proceed When Traffic Light Red,28
+Diplomatic,School Zone  Exceed Speed Limit By <= 15 Km/H,216
+Diplomatic,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,48
+Diplomatic,School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,1
+Embassy Staff - Privilege,20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,14
+Embassy Staff - Privilege,20 Non-School Zone Exceed Speed Limit By > 45 Km/H,2
+Embassy Staff - Privilege,20 Non-school zone exceed speed limit by <= 15km/h,217
+Embassy Staff - Privilege,20 School Zone  Exceed Speed Limit By <= 15 Km/H,35
+Embassy Staff - Privilege,20 School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,6
+Embassy Staff - Privilege,20 School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,1
+Embassy Staff - Privilege,300 (1) Driver using mobile device,8
+Embassy Staff - Privilege,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,19
+Embassy Staff - Privilege,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,5
+Embassy Staff - Privilege,Enter Intersection When Traffic Light Red,1
+Embassy Staff - Privilege,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,11
+Embassy Staff - Privilege,Enter Intersection or Marked Foot Crossing When Traffic Light Red,46
+Embassy Staff - Privilege,Non-School Zone Exceed Speed Limit <= 15 Km/H,259
+Embassy Staff - Privilege,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,19
+Embassy Staff - Privilege,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,2
+Embassy Staff - Privilege,Non-school zone exceed speed limit by <= 15km/h,39
+Embassy Staff - Privilege,Proceed When Traffic Arrow Red,1
+Embassy Staff - Privilege,Proceed When Traffic Light Red,3
+Embassy Staff - Privilege,School Zone  Exceed Speed Limit By <= 15 Km/H,23
+Embassy Staff - Privilege,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,4
+Government Client,20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,799
+Government Client,20 Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,302
+Government Client,20 Non-School Zone Exceed Speed Limit By > 45 Km/H,79
+Government Client,20 Non-school zone exceed speed limit by <= 15km/h,1688
+Government Client,20 School Zone  Exceed Speed Limit By <= 15 Km/H,126
+Government Client,20 School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,18
+Government Client,20 School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,7
+Government Client,20 School Zone Exceed Speed Limit By > 45 Km/H,1
+Government Client,300 (1) Driver using mobile device,66
+Government Client,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,688
+Government Client,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,98
+Government Client,Enter Intersection When Traffic Light Red,2
+Government Client,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,14
+Government Client,Enter Intersection or Marked Foot Crossing When Traffic Light Red,63
+Government Client,Non-School Zone Exceed Speed Limit <= 15 Km/H,155
+Government Client,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,62
+Government Client,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,18
+Government Client,Non-School Zone Exceed Speed Limit By > 45 Km/H,11
+Government Client,Non-school zone exceed speed limit by <= 15km/h,114
+Government Client,Proceed When Traffic Arrow Red,5
+Government Client,Proceed When Traffic Light Red,15
+Government Client,School Zone  Exceed Speed Limit By <= 15 Km/H,29
+Government Client,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,3
+OTHER ORGN,20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,2693
+OTHER ORGN,20 Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,262
+OTHER ORGN,20 Non-School Zone Exceed Speed Limit By > 45 Km/H,145
+OTHER ORGN,20 Non-school zone exceed speed limit by <= 15km/h,47467
+OTHER ORGN,20 School Zone  Exceed Speed Limit By <= 15 Km/H,4279
+OTHER ORGN,20 School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,424
+OTHER ORGN,20 School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,8
+OTHER ORGN,300 (1) Driver using mobile device,3580
+OTHER ORGN,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,1568
+OTHER ORGN,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,341
+OTHER ORGN,Enter Intersection When Traffic Arrow Red,2
+OTHER ORGN,Enter Intersection When Traffic Light Red,3
+OTHER ORGN,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,442
+OTHER ORGN,Enter Intersection or Marked Foot Crossing When Traffic Light Red,1635
+OTHER ORGN,Non-School Zone Exceed Speed Limit <= 15 Km/H,13409
+OTHER ORGN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,2363
+OTHER ORGN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,225
+OTHER ORGN,Non-School Zone Exceed Speed Limit By > 45 Km/H,144
+OTHER ORGN,Non-school zone exceed speed limit by <= 15km/h,9670
+OTHER ORGN,Proceed When Traffic Arrow Red,79
+OTHER ORGN,Proceed When Traffic Light Red,80
+OTHER ORGN,School Zone  Exceed Speed Limit By <= 15 Km/H,2345
+OTHER ORGN,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,343
+OTHER ORGN,School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,2
+OTHER PRSN,20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,16758
+OTHER PRSN,20 Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,1388
+OTHER PRSN,20 Non-School Zone Exceed Speed Limit By > 45 Km/H,838
+OTHER PRSN,20 Non-school zone exceed speed limit by <= 15km/h,313210
+OTHER PRSN,20 School Zone  Exceed Speed Limit By <= 15 Km/H,30865
+OTHER PRSN,20 School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,2847
+OTHER PRSN,20 School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,53
+OTHER PRSN,20 School Zone Exceed Speed Limit By > 45 Km/H,4
+OTHER PRSN,300 (1) Driver using mobile device,16283
+OTHER PRSN,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,12227
+OTHER PRSN,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,2342
+OTHER PRSN,Enter Intersection When Traffic Arrow Red,77
+OTHER PRSN,Enter Intersection When Traffic Light Red,346
+OTHER PRSN,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,9933
+OTHER PRSN,Enter Intersection or Marked Foot Crossing When Traffic Light Red,26992
+OTHER PRSN,Non-School Zone Exceed Speed Limit <= 15 Km/H,353114
+OTHER PRSN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,34772
+OTHER PRSN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,2215
+OTHER PRSN,Non-School Zone Exceed Speed Limit By > 45 Km/H,1108
+OTHER PRSN,Non-school zone exceed speed limit by <= 15km/h,62834
+OTHER PRSN,Proceed When Traffic Arrow Red,3100
+OTHER PRSN,Proceed When Traffic Light Red,3768
+OTHER PRSN,School Zone  Exceed Speed Limit By <= 15 Km/H,17837
+OTHER PRSN,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,2481
+OTHER PRSN,School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,62
+OTHER PRSN,School Zone Exceed Speed Limit By > 45 Km/H,4
+Religious or Charitable Client,20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,16
+Religious or Charitable Client,20 Non-school zone exceed speed limit by <= 15km/h,467
+Religious or Charitable Client,20 School Zone  Exceed Speed Limit By <= 15 Km/H,63
+Religious or Charitable Client,20 School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,5
+Religious or Charitable Client,300 (1) Driver using mobile device,28
+Religious or Charitable Client,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,16
+Religious or Charitable Client,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,5
+Religious or Charitable Client,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,7
+Religious or Charitable Client,Enter Intersection or Marked Foot Crossing When Traffic Light Red,22
+Religious or Charitable Client,Non-School Zone Exceed Speed Limit <= 15 Km/H,132
+Religious or Charitable Client,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,6
+Religious or Charitable Client,Non-school zone exceed speed limit by <= 15km/h,107
+Religious or Charitable Client,Proceed When Traffic Light Red,1
+Religious or Charitable Client,School Zone  Exceed Speed Limit By <= 15 Km/H,41
+Religious or Charitable Client,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,5
+20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,4718
+20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,5949
+20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,POINT TO POINT CAMERA,727
+20 Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,RED LIGHT AND SPEED CAMERA,9341
+20 Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,FIXED ONLY SPEED CAMERA,994
+20 Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,451
+20 Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,POINT TO POINT CAMERA,136
+20 Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,RED LIGHT AND SPEED CAMERA,532
+20 Non-School Zone Exceed Speed Limit By > 45 Km/H,FIXED ONLY SPEED CAMERA,818
+20 Non-School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,126
+20 Non-School Zone Exceed Speed Limit By > 45 Km/H,POINT TO POINT CAMERA,36
+20 Non-School Zone Exceed Speed Limit By > 45 Km/H,RED LIGHT AND SPEED CAMERA,206
+20 Non-school zone exceed speed limit by <= 15km/h,FIXED ONLY SPEED CAMERA,66219
+20 Non-school zone exceed speed limit by <= 15km/h,MOBILE SPEED CAMERA,63914
+20 Non-school zone exceed speed limit by <= 15km/h,POINT TO POINT CAMERA,12304
+20 Non-school zone exceed speed limit by <= 15km/h,RED LIGHT AND SPEED CAMERA,223450
+20 School Zone  Exceed Speed Limit By <= 15 Km/H,FIXED ONLY SPEED CAMERA,3
+20 School Zone  Exceed Speed Limit By <= 15 Km/H,MOBILE SPEED CAMERA,35720
+20 School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,3333
+20 School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,69
+20 School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,5
+300 (1) Driver using mobile device,MOBILE DEVICE DETECTION CAMERA,20055
+59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,14669
+60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,2840
+Enter Intersection When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,82
+Enter Intersection When Traffic Light Red,RED LIGHT AND SPEED CAMERA,355
+Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,10539
+Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,29203
+Non-School Zone Exceed Speed Limit <= 15 Km/H,FIXED ONLY SPEED CAMERA,158325
+Non-School Zone Exceed Speed Limit <= 15 Km/H,MOBILE SPEED CAMERA,76445
+Non-School Zone Exceed Speed Limit <= 15 Km/H,POINT TO POINT CAMERA,16641
+Non-School Zone Exceed Speed Limit <= 15 Km/H,RED LIGHT AND SPEED CAMERA,119987
+Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,16118
+Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,11846
+Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,POINT TO POINT CAMERA,1164
+Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,RED LIGHT AND SPEED CAMERA,9347
+Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,FIXED ONLY SPEED CAMERA,1536
+Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,616
+Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,POINT TO POINT CAMERA,126
+Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,RED LIGHT AND SPEED CAMERA,594
+Non-School Zone Exceed Speed Limit By > 45 Km/H,FIXED ONLY SPEED CAMERA,1227
+Non-School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,186
+Non-School Zone Exceed Speed Limit By > 45 Km/H,POINT TO POINT CAMERA,32
+Non-School Zone Exceed Speed Limit By > 45 Km/H,RED LIGHT AND SPEED CAMERA,205
+Non-school zone exceed speed limit by <= 15km/h,FIXED ONLY SPEED CAMERA,29677
+Non-school zone exceed speed limit by <= 15km/h,MOBILE SPEED CAMERA,27072
+Non-school zone exceed speed limit by <= 15km/h,POINT TO POINT CAMERA,5696
+Non-school zone exceed speed limit by <= 15km/h,RED LIGHT AND SPEED CAMERA,11163
+Proceed When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,3213
+Proceed When Traffic Light Red,RED LIGHT AND SPEED CAMERA,3923
+School Zone  Exceed Speed Limit By <= 15 Km/H,FIXED ONLY SPEED CAMERA,36
+School Zone  Exceed Speed Limit By <= 15 Km/H,MOBILE SPEED CAMERA,20542
+School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,4
+School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,2896
+School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,69
+School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,5

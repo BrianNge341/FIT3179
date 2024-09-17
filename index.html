@@ -13,12 +13,26 @@
         body {
             background-color: #f8f9fa;
         }
+        .btn-spacing {
+            margin-right: 10px;
+        }   
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
 
         .card {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             border-radius: 12px;
             border: none;
             transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
 
         .card-header {
@@ -70,8 +84,8 @@
         }
 
         /* Adjust the spacing and padding for better layout */
-        .pt-5, .pb-5 {
-            padding-top: 3rem !important;
+        .pt-3, .pb-5 {
+            padding-top: 1.5rem !important; /* Reduced padding */
             padding-bottom: 3rem !important;
         }
 
@@ -80,7 +94,7 @@
         }
 
         .header-container {
-            margin-top: 20px; /* Adjust this value to control the space at the top */
+            margin-top: 10px; /* Adjusted the space at the top */
         }
 
         .footer-text {
@@ -107,15 +121,13 @@
             margin-right: 5px;
         }
 
+        .icon {
+            font-size: 1.5rem;
+        }
+
     </style>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            const barChartSpec = "bar_chart.vg.json";
-            vegaEmbed('#bar_chart', barChartSpec, {
-                renderer: "svg",
-                actions: false
-            });
-
             var vg_population = "visualisation/map_visualisation_population.vg.json";
             vegaEmbed("#map_visualisation_population", vg_population, {
                 renderer: "svg",
@@ -125,6 +137,13 @@
 
             var vg_vehicle = "visualisation/map_visualisation_vehicle.vg.json";
             vegaEmbed("#map_visual_vehicle", vg_vehicle, {
+                renderer: "svg",
+                actions: false
+            }).then(function(result) {
+            }).catch(console.error);
+
+            var vg_sankey = "visualisation/sankey_visualisation.vg.json";
+            vegaEmbed("#sankey", vg_sankey, {
                 renderer: "svg",
                 actions: false
             }).then(function(result) {
@@ -145,6 +164,11 @@
                     <div class="text-center">
                         <h1>Road Safety in Australian Capital Territory</h1>
                         <h3>Analysis Based On Traffic Offences</h3>
+                        <div class="btn-group" role="group" aria-label="Navigation Buttons">
+                            <a class="btn btn-primary btn-spacing" href="#map_visualisation_population">Population Map</a>
+                            <a class="btn btn-primary btn-spacing" href="#map_visual_vehicle">Vehicle Map</a>
+                            <a class="btn btn-primary" href="#sankey">Sankey Diagram</a>
+                        </div>
                     </div>
                 </div>
                 <div class="card-body align-content-center">
@@ -164,7 +188,7 @@
     </div>
     <div class="row pt-3 pb-5">
         <div class="col-12">
-            <div class="row justify-content-center pt-5 pb-5">
+            <div class="row justify-content-center pt-3 pb-5"> <!-- Reduced padding at the top -->
                 <div class="col-12">
                     <div class="card border-0 shadow-lg mb-4">
                         <div class="card-header text-center">
@@ -183,10 +207,10 @@
                     </div>
                     <div class="card border-0 shadow-lg mb-4">
                         <div class="card-header text-center">
-                            Bar Chart
+                            Sankey Diagram
                         </div>
                         <div class="card-body visualization-container">
-                            <div id="bar_chart"></div>
+                            <div id="sankey"></div>
                         </div>
                     </div>
                     <div class="card border-0 shadow-lg">

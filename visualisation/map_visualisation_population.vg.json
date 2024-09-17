@@ -25,7 +25,7 @@
     },
     {
       "data": {
-        "url": "datasource\\OffencesMap.csv"
+        "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/datasource/OffencesMap.csv"
       },
       "transform": [
         {
@@ -47,7 +47,11 @@
           }
         }
       ],
-      "mark": "geoshape",
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      },
       "encoding": {
         "color": {
           "field": "Penalty_Per_Capita",

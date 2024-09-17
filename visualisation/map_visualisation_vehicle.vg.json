@@ -32,7 +32,7 @@
           "lookup": "Rego_State",
           "from": {
             "data": {
-              "url": "data\\australia_map.topojson",
+              "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/data/australia_map.topojson",
               "format": {
                 "type": "topojson",
                 "feature": "collection"
@@ -43,13 +43,19 @@
           }
         }
       ],
-      "mark": "geoshape",
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      },
       "encoding": {
         "color": {
           "field": "Vehicle registrations",
           "type": "quantitative",
           "scale": {
-            "scheme": "blues"
+            "type": "quantize",
+            "domain": [0, 6000000],
+            "range": ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#084594"]
           },
           "legend": {
             "title": "Vehicle Registrations"
