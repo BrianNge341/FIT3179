@@ -58,6 +58,7 @@
           "type": "quantitative",
           "scale": {
             "type": "log",
+            "domain": [0.1, 20],
             "scheme": "blues"
           },
           "legend": {
@@ -66,10 +67,10 @@
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "State"},
-          {"field": "Sum of Sum_Inf_Count", "type": "quantitative", "title": "Infraction Count"},
-          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount"},
-          {"field": "Population", "type": "quantitative", "title": "Population"},
-          {"field": "Penalty_Per_Capita", "type": "quantitative", "title": "Penalty Per Capita"}
+          {"field": "Sum of Sum_Inf_Count", "type": "quantitative", "title": "Infraction Count", "format": ","},
+          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount", "format": ","},
+          {"field": "Population", "type": "quantitative", "title": "Population", "format": ","},
+          {"field": "Penalty_Per_Capita", "type": "quantitative", "title": "Penalty Per Capita", "format": ",.2f"}
         ]
       }
     }

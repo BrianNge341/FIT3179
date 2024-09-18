@@ -29,6 +29,14 @@
       },
       "transform": [
         {
+          "calculate": "datum['Sum of Sum_Inf_Count'] / datum['Vehicle registrations']",
+          "as": "Infraction_Count_Per_Capita"
+        },
+        {
+          "calculate": "datum['Sum of Sum_Pen_Amt'] / datum['Vehicle registrations']",
+          "as": "Penalty_Amount_Per_Capita"
+        },
+        {
           "lookup": "Rego_State",
           "from": {
             "data": {
@@ -50,20 +58,24 @@
       },
       "encoding": {
         "color": {
-          "field": "Vehicle registrations",
+          "field": "Penalty_Amount_Per_Capita", 
           "type": "quantitative",
           "scale": {
             "type": "quantize",
-            "domain": [0, 6000000],
+            "domain": [0, 5], 
             "range": ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#084594"]
           },
           "legend": {
-            "title": "Vehicle Registrations"
+            "title": "Penalty Amount Per Vehicle"
           }
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "State"},
-          {"field": "Vehicle registrations", "type": "quantitative", "title": "Vehicle Registrations"}
+          {"field": "Sum of Sum_Inf_Count", "type": "quantitative", "title": "Infraction Count", "format": ","},
+          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount", "format": ","},
+          {"field": "Vehicle registrations", "type": "quantitative", "title": "Vehicle Registrations", "format": ","},
+          {"field": "Infraction_Count_Per_Capita", "type": "quantitative", "title": "Infraction Count Per Capita", "format": ",.2f"},
+          {"field": "Penalty_Amount_Per_Capita", "type": "quantitative", "title": "Penalty Amount Per Capita", "format": ",.2f"}
         ]
       }
     }
