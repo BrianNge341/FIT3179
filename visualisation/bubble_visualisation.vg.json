@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Animated bubble chart showing changes over time.",
+  "data": {
+    "url": "datasource\\traffic_offences.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "Rego_State",
+      "type": "nominal",
+      "title": "Registration State"
+    },
+    "y": {
+      "field": "Offence_Desc",
+      "type": "nominal",
+      "title": "Offence Description"
+    },
+    "size": {
+      "field": "Sum_Inf_Count",
+      "type": "quantitative",
+      "title": "Infraction Count"
+    },
+    "color": {
+      "field": "Sum_Pen_Amt",
+      "type": "quantitative",
+      "title": "Penalty Amount"
+    },
+    "tooltip": [
+      {"field": "Rego_State", "type": "nominal", "title": "Registration State"},
+      {"field": "Offence_Desc", "type": "nominal", "title": "Offence Description"},
+      {"field": "Sum_Inf_Count", "type": "quantitative", "title": "Infraction Count"},
+      {"field": "Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount"}
+    ]
+  },
+  "animation": {
+    "field": "Offence_Month",
+    "type": "temporal",
+    "title": "Offence Month"
+  }
+}

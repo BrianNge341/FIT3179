@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A heatmap showing the number of offences per state per month.",
+    "data": {
+      "url": "datasource\\heatmap.csv",
+      "format": {
+        "type": "csv"
+      }
+    },
+    "width": 1000,
+    "height": 300,
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "field": "Offence_Month",
+        "type": "ordinal",
+        "title": "Offence Month",
+        "timeUnit": "yearmonth",
+        "axis": {
+          "labelAngle": -45
+        }
+      },
+      "y": {
+        "field": "Rego_State",
+        "type": "nominal",
+        "title": "State",
+        "sort": "ascending"
+      },
+      "color": {
+        "aggregate": "sum",
+        "field": "Sum_Inf_Count",
+        "type": "quantitative",
+        "scale": {
+          "scheme": "blues"
+        },
+        "legend": {
+          "title": "Infraction Count"
+        }
+      },
+      "tooltip": [
+        {"field": "Offence_Month", "type": "ordinal", "title": "Offence Month"},
+        {"field": "Rego_State", "type": "nominal", "title": "State"},
+        {"aggregate": "sum", "field": "Sum_Inf_Count", "type": "quantitative", "title": "Infraction Count"}
+      ]
+    }
+  }

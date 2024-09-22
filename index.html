@@ -125,6 +125,13 @@
             font-size: 1.5rem;
         }
 
+        .visualization-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
     </style>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
@@ -144,6 +151,34 @@
 
             var vg_sankey = "visualisation/sankey_visualisation.vg.json";
             vegaEmbed("#sankey", vg_sankey, {
+                renderer: "svg",
+                actions: false
+            }).then(function(result) {
+            }).catch(console.error);
+
+            var vg_heatmap = "visualisation/heatmap_visualisation.vg.json";
+            vegaEmbed("#heatmap", vg_heatmap, {
+                renderer: "svg",
+                actions: false
+            }).then(function(result) {
+            }).catch(console.error);
+
+            var vg_sun = "visualisation/sunburst_visualisation.vg.json";
+            vegaEmbed("#sun", vg_sun, {
+                renderer: "svg",
+                actions: false
+            }).then(function(result) {
+            }).catch(console.error);
+
+            var vg_bubble = "visualisation/bubble_visualisation.vg.json";
+            vegaEmbed("#bubble", vg_bubble, {
+                renderer: "svg",
+                actions: false
+            }).then(function(result) {
+            }).catch(console.error);
+
+            var vg_treemap = "visualisation/treemap_visualisation.vg.json";
+            vegaEmbed("#treemap", vg_treemap, {
                 renderer: "svg",
                 actions: false
             }).then(function(result) {
@@ -207,12 +242,45 @@
                     </div>
                     <div class="card border-0 shadow-lg mb-4">
                         <div class="card-header text-center">
-                            Sankey Diagram
+                          Sankey Diagram
                         </div>
-                        <div class="card-body visualization-container">
-                            <div id="sankey"></div>
+                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                          <div id="sankey"></div>
                         </div>
                     </div>
+                    <!-- <div class="card border-0 shadow-lg mb-4">
+                        <div class="card-header text-center">
+                          Heatmap
+                        </div>
+                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                          <div id="heatmap"></div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-lg mb-4">
+                        <div class="card-header text-center">
+                          Sunburst
+                        </div>
+                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                          <div id="sun"></div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-lg mb-4">
+                        <div class="card-header text-center">
+                          Bubble
+                        </div>
+                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                          <div id="bubble"></div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-lg mb-4">
+                        <div class="card-header text-center">
+                          Treemap
+                        </div>
+                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                          <div id="treemap"></div>
+                        </div>
+                    </div> -->
                     <div class="card border-0 shadow-lg">
                         <div class="card-footer pb-0 text-center footer-text">
                             <p><b>Brian Nge</b></p>

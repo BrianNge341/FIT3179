@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Treemap showing the proportion of fines across various categories.",
+  "data": {
+    "url": "datasource\\traffic_offences.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "flatten": ["Location_Desc", "Camera_Type", "Offence_Desc", "Sum_Pen_Amt"]
+    }
+  ],
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Location_Desc",
+      "type": "nominal",
+      "title": "Location Description"
+    },
+    "y": {
+      "field": "Camera_Type",
+      "type": "nominal",
+      "title": "Camera Type"
+    },
+    "size": {
+      "field": "Sum_Pen_Amt",
+      "type": "quantitative",
+      "title": "Penalty Amount"
+    },
+    "color": {
+      "field": "Offence_Desc",
+      "type": "nominal",
+      "title": "Offence Description"
+    },
+    "tooltip": [
+      {"field": "Location_Desc", "type": "nominal", "title": "Location Description"},
+      {"field": "Camera_Type", "type": "nominal", "title": "Camera Type"},
+      {"field": "Offence_Desc", "type": "nominal", "title": "Offence Description"},
+      {"field": "Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount"}
+    ]
+  }
+}

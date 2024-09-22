@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Sunburst chart showing hierarchical relationships.",
+  "data": {
+    "url": "datasource\\traffic_offences.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "flatten": ["Clt_Catg", "Camera_Type", "Offence_Desc", "Sum_Inf_Count"]
+    }
+  ],
+  "mark": "arc",
+  "encoding": {
+    "theta": {
+      "field": "Sum_Inf_Count",
+      "type": "quantitative",
+      "stack": true
+    },
+    "color": {
+      "field": "Clt_Catg",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Clt_Catg", "type": "nominal", "title": "Client Category"},
+      {"field": "Camera_Type", "type": "nominal", "title": "Camera Type"},
+      {"field": "Offence_Desc", "type": "nominal", "title": "Offence Description"},
+      {"field": "Sum_Inf_Count", "type": "quantitative", "title": "Infraction Count"}
+    ]
+  }
+}
