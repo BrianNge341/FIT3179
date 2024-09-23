@@ -5,7 +5,7 @@
   "data": [
     {
       "name": "rawData",
-      "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/datasource/sankey_data.csv",
+      "url": "datasource\\sankey_data.csv",
       "format": {"type": "csv"},
       "transform": [
         {"type": "formula", "expr": "datum.source", "as": "stk1"},
