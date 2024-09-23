@@ -9,182 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .btn-spacing {
-            margin-right: 10px;
-        }   
-        .navbar {
-            background-color: #007bff;
-        }
-
-        .navbar-brand, .nav-link {
-            color: white !important;
-        }
-
-        .card {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            border-radius: 12px;
-            border: none;
-            transition: box-shadow 0.3s;
-        }
-
-        .card:hover {
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-header {
-            background-color: #007bff;
-            color: white;
-            font-weight: bold;
-            border-radius: 12px 12px 0 0;
-            font-size: 1.25rem;
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        /* Map and Chart Heights */
-        #map_visualisation_population, #map_visual_vehicle {
-            height: 500px;
-        }
-
-        #bar_chart {
-            height: 400px;
-        }
-
-        .github-btn {
-            text-align: right;
-            margin-right: 15px;
-        }
-
-        .footer-text {
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-
-        /* Heading Styles */
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-        }
-
-        h3 {
-            font-size: 1.75rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        .text-justify p {
-            font-size: 1.15rem;
-            line-height: 1.6;
-        }
-
-        /* Adjust the spacing and padding for better layout */
-        .pt-3, .pb-5 {
-            padding-top: 1.5rem !important; /* Reduced padding */
-            padding-bottom: 3rem !important;
-        }
-
-        .shadow-lg {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) !important;
-        }
-
-        .header-container {
-            margin-top: 10px; /* Adjusted the space at the top */
-        }
-
-        .footer-text {
-            background-color: #343a40;
-            color: white;
-            padding: 20px;
-            border-radius: 0 0 12px 12px;
-        }
-
-        .footer-text p {
-            margin: 5px 0;
-        }
-
-        .footer-text a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .footer-text a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-text .icon {
-            margin-right: 5px;
-        }
-
-        .icon {
-            font-size: 1.5rem;
-        }
-
-        .visualization-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-    </style>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            var vg_population = "visualisation/map_visualisation_population.vg.json";
-            vegaEmbed("#map_visualisation_population", vg_population, {
-                renderer: "svg",
-                actions: false
-            }).then(function(result) {
-            }).catch(console.error);
-
-            var vg_vehicle = "visualisation/map_visualisation_vehicle.vg.json";
-            vegaEmbed("#map_visual_vehicle", vg_vehicle, {
-                renderer: "svg",
-                actions: false
-            }).then(function(result) {
-            }).catch(console.error);
-
-            var vg_sankey = "visualisation/sankey_visualisation.vg.json";
-            vegaEmbed("#sankey", vg_sankey, {
-                renderer: "svg",
-                actions: false
-            }).then(function(result) {
-            }).catch(console.error);
-
-            var vg_heatmap = "visualisation/heatmap_visualisation.vg.json";
-            vegaEmbed("#heatmap", vg_heatmap, {
-                renderer: "svg",
-                actions: false
-            }).then(function(result) {
-            }).catch(console.error);
-
-            var vg_sun = "visualisation/sunburst_visualisation.vg.json";
-            vegaEmbed("#sun", vg_sun, {
-                renderer: "svg",
-                actions: false
-            }).then(function(result) {
-            }).catch(console.error);
-
-            var vg_bubble = "visualisation/bubble_visualisation.vg.json";
-            vegaEmbed("#bubble", vg_bubble, {
-                renderer: "svg",
-                actions: false
-            }).then(function(result) {
-            }).catch(console.error);
-
-            var vg_treemap = "visualisation/treemap_visualisation.vg.json";
-            vegaEmbed("#treemap", vg_treemap, {
-                renderer: "svg",
-                actions: false
-            }).then(function(result) {
-            }).catch(console.error);
-        });
-    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="visualisations.js" defer></script>
 </head>
 <body>
 <div class="container-fluid font-weight-light p-0">
@@ -233,9 +59,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div id="map_visualisation_population"></div>
+                                    <p>This map illustrates the distribution of penalty amounts per capita across Australia from September 2017 to August 2024. The color intensity of each region indicates the severity of penalties imposed. As depicted, there is a significant disparity in penalty amounts between different regions. Eastern states generally exhibit higher penalties compared to Western and Northern territories. This could be attributed to various factors such as population density, traffic volume, and enforcement strategies.</p>
                                 </div>
                                 <div class="col-md-6">
                                     <div id="map_visual_vehicle"></div>
+                                    <p>This map showcases the penalty amounts per vehicle in Australia during the same period. Similar to the per capita analysis, regional variations are evident. Certain areas, particularly in the eastern states, have a higher concentration of penalties per vehicle. This suggests stricter enforcement or a higher rate of traffic violations in these regions.</p>
                                 </div>
                             </div>
                         </div>
@@ -246,6 +74,9 @@
                         </div>
                         <div class="card-body visualization-container d-flex justify-content-center align-items-center">
                           <div id="sankey"></div>
+                        </div>
+                        <div class="card-body">
+                            <p>The Sankey diagram visualizes traffic offenses categorized by client type, offense description, and camera type. It highlights the distribution and frequency of various traffic violations detected by different types of cameras. The data includes offenses such as exceeding speed limits, running red lights, and using mobile devices while driving, recorded for different client types including diplomatic, government, and other organizations. This visualization helps in understanding the patterns and prevalence of traffic offenses across different categories.</p>
                         </div>
                     </div>
                     <!-- <div class="card border-0 shadow-lg mb-4">
