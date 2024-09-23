@@ -45,6 +45,9 @@
             "key": "properties.State_Name",
             "fields": ["type", "geometry"]
           }
+        },
+        {
+          "filter": "isValid(datum.Penalty_Amount_Per_Vehicle) && (!StateFilter || datum.Rego_State == StateFilter)"
         }
       ],
       "mark": {
@@ -70,6 +73,38 @@
           {"field": "Vehicle registrations", "type": "quantitative", "title": "Vehicle Registrations", "format": ","},
           {"field": "Penalty_Amount_Per_Vehicle", "type": "quantitative", "title": "Penalty Amount Per Vehicle (AUD)", "format": ",.5f"}
         ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "StateFilter",
+      "value": null,
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "ACT",
+          "NSW",
+          "NT",
+          "QLD",
+          "SA",
+          "TAS",
+          "VIC",
+          "WA"
+        ],
+        "labels": [
+          "All",
+          "Australian Capital Territory",
+          "New South Wales",
+          "Northern Territory",
+          "Queensland",
+          "South Australia",
+          "Tasmania",
+          "Victoria",
+          "Western Australia"
+        ],
+        "name": "Select State: "
       }
     }
   ]

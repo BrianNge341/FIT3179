@@ -36,7 +36,7 @@
           "lookup": "Rego_State",
           "from": {
             "data": {
-              "url": "data\\australia_map.topojson",
+              "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/data/australia_map.topojson",
               "format": {
                 "type": "topojson",
                 "feature": "collection"
@@ -45,6 +45,9 @@
             "key": "properties.State_Name",
             "fields": ["type", "geometry"]
           }
+        },
+        {
+          "filter": "isValid(datum.Penalty_Per_Capita) && (!StateFilter || datum.Rego_State == StateFilter)"
         }
       ],
       "mark": {
@@ -71,6 +74,38 @@
           {"field": "Population", "type": "quantitative", "title": "Population", "format": ","},
           {"field": "Penalty_Per_Capita", "type": "quantitative", "title": "Penalty Amount Per Capita (AUD)", "format": ",.4f"}
         ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "StateFilter",
+      "value": null,
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "ACT",
+          "NSW",
+          "NT",
+          "QLD",
+          "SA",
+          "TAS",
+          "VIC",
+          "WA"
+        ],
+        "labels": [
+          "All",
+          "Australian Capital Territory",
+          "New South Wales",
+          "Northern Territory",
+          "Queensland",
+          "South Australia",
+          "Tasmania",
+          "Victoria",
+          "Western Australia"
+        ],
+        "name": "Select State: "
       }
     }
   ]
