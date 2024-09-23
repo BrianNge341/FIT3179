@@ -70,9 +70,9 @@
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "State"},
-          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount (AUD)", "format": ","},
-          {"field": "Population", "type": "quantitative", "title": "Population", "format": ","},
-          {"field": "Penalty_Per_Capita", "type": "quantitative", "title": "Penalty Amount Per Capita (AUD)", "format": ",.4f"}
+          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount (AUD)", "format": ",", "formatType": "number"},
+          {"field": "Population", "type": "quantitative", "title": "Population", "format": ",", "formatType": "number"},
+          {"field": "Penalty_Per_Capita", "type": "quantitative", "title": "Penalty Amount Per Capita (AUD)", "format": ",.4f", "formatType": "number"}
         ]
       }
     }
