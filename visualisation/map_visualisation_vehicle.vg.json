@@ -45,6 +45,9 @@
             "key": "properties.State_Name",
             "fields": ["type", "geometry"]
           }
+        },
+        {
+          "filter": "isValid(datum.Penalty_Amount_Per_Vehicle) && (!StateFilter || datum.Rego_State == StateFilter)"
         }
       ],
       "mark": {
@@ -66,10 +69,42 @@
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "State"},
-          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount (AUD)", "format": ","},
-          {"field": "Vehicle registrations", "type": "quantitative", "title": "Vehicle Registrations", "format": ","},
-          {"field": "Penalty_Amount_Per_Vehicle", "type": "quantitative", "title": "Penalty Amount Per Vehicle (AUD)", "format": ",.5f"}
+          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount (AUD)", "format": ",", "formatType": "number"},
+          {"field": "Vehicle registrations", "type": "quantitative", "title": "Vehicle Registrations", "format": ",", "formatType": "number"},
+          {"field": "Penalty_Amount_Per_Vehicle", "type": "quantitative", "title": "Penalty Amount Per Vehicle (AUD)", "format": ",.4f", "formatType": "number"}
         ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "StateFilter",
+      "value": null,
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "ACT",
+          "NSW",
+          "NT",
+          "QLD",
+          "SA",
+          "TAS",
+          "VIC",
+          "WA"
+        ],
+        "labels": [
+          "All",
+          "Australian Capital Territory",
+          "New South Wales",
+          "Northern Territory",
+          "Queensland",
+          "South Australia",
+          "Tasmania",
+          "Victoria",
+          "Western Australia"
+        ],
+        "name": "Select State: "
       }
     }
   ]
