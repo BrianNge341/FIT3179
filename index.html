@@ -148,6 +148,13 @@
                 actions: false
             }).then(function(result) {
             }).catch(console.error);
+            
+            var vg_sankey = "visualisation/map_visualisation_slider.vg.json";
+            vegaEmbed("#map_slider", vg_sankey, {
+                renderer: "svg",
+                actions: false
+            }).then(function(result) {
+            }).catch(console.error);
         });
     </script>
 </head>
@@ -203,8 +210,15 @@
                                     <div id="map_visual_vehicle"></div>
                                 </div>
                             </div>
+                            <div class="row mt-4">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <div id="map_slider"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
                     <div class="card border-0 shadow-lg mb-4">
                         <div class="card-header text-center">
                             Sankey Diagram

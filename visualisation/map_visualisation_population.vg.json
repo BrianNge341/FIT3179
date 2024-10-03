@@ -65,7 +65,7 @@
             "range": ["#f7fbff", "#e1f3ff", "#c6e9ff", "#a8ddff", "#8ad1ff", "#6bc5ff", "#4cb9ff", "#2dadff", "#0ea1ff", "#008cff", "#0077e6", "#0062cc", "#004db3", "#003899", "#002480", "#001066", "#00004d"]
           },
           "legend": {
-            "title": "Penalty Amount Per Capita"
+            "title": "Penalty Amount Per Capita (AUD)"
           }
         },
         "tooltip": [
