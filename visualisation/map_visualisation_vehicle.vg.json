@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A map visualization of penalty amounts per vehicle per state from September 2017 to August 2024.",
-  "title": "Penalty Amount Per Vehicle in Australia (September 2017 - August 2024)",
+  "title": "Penalty Amount (AUD) Per Vehicle in Australia (September 2017 - August 2024)",
   "width": 800,
   "height": 500,
   "autosize": {
@@ -64,7 +64,7 @@
             "range": ["#f7fbff", "#e1f3ff", "#c6e9ff", "#a8ddff", "#8ad1ff", "#6bc5ff", "#4cb9ff", "#2dadff", "#0ea1ff", "#008cff", "#0077e6", "#0062cc", "#004db3", "#003899", "#002480", "#001066", "#00004d"]
           },
           "legend": {
-            "title": "Penalty Amount Per Vehicle"
+            "title": "Penalty Amount Per Vehicle (AUD)"
           }
         },
         "tooltip": [

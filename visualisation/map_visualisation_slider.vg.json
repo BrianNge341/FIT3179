@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A map visualization of penalty amounts per capita per state with a slider to filter by year.",
-  "title": "Penalty Amount Per Capita in Australia by Year",
+  "title": "Penalty Amount (AUD) Per Capita in Australia by Year",
   "width": 800,
   "height": 500,
   "autosize": {
