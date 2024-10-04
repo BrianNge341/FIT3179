@@ -75,6 +75,41 @@
           {"field": "Penalty_Per_Capita", "type": "quantitative", "title": "Penalty Amount Per Capita (AUD)", "format": ",.4f", "formatType": "number"}
         ]
       }
+    },
+    {
+      "data": {
+        "values": [
+          {"text": "Victoria", "longitude": 144, "latitude": -37.5},
+          {"text": "Northern Territory", "longitude": 133.5, "latitude": -21},
+          {"text": "South Australia", "longitude": 135, "latitude": -30},
+          {"text": "Western Australia", "longitude": 122, "latitude": -26},
+          {"text": "Queensland", "longitude": 144.479031, "latitude": -24},
+          {"text": "New South Wales", "longitude": 147, "latitude": -32.5},
+          {"text": "Tasmania", "longitude": 147.5, "latitude": -42.5},
+          {"text": "Australian Capital Territory", "longitude": 152, "latitude": -35.5}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 12,
+        "dy": -10
+      },
+      "encoding": {
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        }
+      }
     }
   ],
   "params": [
