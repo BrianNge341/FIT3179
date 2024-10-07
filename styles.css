@@ -1,5 +1,6 @@
 body {
     background-color: #f8f9fa;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 .btn-spacing {
     margin-right: 10px;
@@ -52,6 +53,31 @@ body {
 .footer-text {
     font-weight: 600;
     font-size: 1.2rem;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+}
+
+.footer-text p {
+    margin: 5px 0;
+}
+
+.footer-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.footer-text .icon {
+    margin-right: 5px;
+}
+
+.icon {
+    font-size: 1.5rem;
 }
 
 /* Heading Styles */
@@ -83,39 +109,4 @@ h3 {
 
 .header-container {
     margin-top: 10px; /* Adjusted the space at the top */
-}
-
-.footer-text {
-    background-color: #343a40;
-    color: white;
-    padding: 20px;
-    border-radius: 0 0 12px 12px;
-}
-
-.footer-text p {
-    margin: 5px 0;
-}
-
-.footer-text a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.footer-text a:hover {
-    text-decoration: underline;
-}
-
-.footer-text .icon {
-    margin-right: 5px;
-}
-
-.icon {
-    font-size: 1.5rem;
-}
-
-.visualization-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
 }

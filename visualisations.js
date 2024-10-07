@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }).then(function(result) {
     }).catch(console.error);
 
+    var vg_slider = "visualisation/map_visualisation_slider.vg.json";
+    vegaEmbed("#map_slider", vg_slider, {
+        renderer: "svg",
+        actions: false
+    }).then(function(result) {
+    }).catch(console.error);
+
     var vg_sankey = "visualisation/sankey_visualisation.vg.json";
     vegaEmbed("#sankey", vg_sankey, {
         renderer: "svg",
