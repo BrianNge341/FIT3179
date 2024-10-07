@@ -13,118 +13,123 @@
     <script src="visualisations.js" defer></script>
 </head>
 <body>
-<div class="container-fluid font-weight-light p-0">
-    <div class="row header-container">
-        <div class="col-12">
-            <div class="card border-0 shadow-lg mb-4">
-                <div class="card-header bg-dark text-white">
-                    <div class="github-btn">
-                        <a aria-label="Follow on GitHub" class="github-button"
-                           data-size="large" href="https://github.com/BrianNge341/FIT3179">Visit Project</a>
-                    </div>
-                    <div class="text-center">
-                        <h1>Road Safety in Australian Capital Territory</h1>
-                        <h3>Analysis Based On Traffic Offences</h3>
-                        <div class="btn-group" role="group" aria-label="Navigation Buttons">
-                            <a class="btn btn-primary btn-spacing" href="#map_visualisation_population">Population Map</a>
-                            <a class="btn btn-primary btn-spacing" href="#map_visual_vehicle">Vehicle Map</a>
-                            <a class="btn btn-primary" href="#sankey">Sankey Diagram</a>
+    <div class="container-fluid font-weight-light p-0">
+        <div class="row header-container">
+            <div class="col-12">
+                <div class="card border-0 shadow-lg mb-4">
+                    <div class="card-header bg-dark text-white">
+                        <div class="github-btn">
+                            <a aria-label="Follow on GitHub" class="github-button"
+                               data-size="large" href="https://github.com/BrianNge341/FIT3179">Visit Project</a>
+                        </div>
+                        <div class="text-center">
+                            <h1>Road Safety in Australian Capital Territory</h1>
+                            <h3>Analysis Based On Traffic Offences</h3>
+                            <div class="btn-group" role="group" aria-label="Navigation Buttons">
+                                <a class="btn btn-primary btn-spacing" href="#map_visualisation_population">Population Map</a>
+                                <a class="btn btn-primary btn-spacing" href="#map_visual_vehicle">Vehicle Map</a>
+                                <a class="btn btn-primary" href="#sankey">Sankey Diagram</a>
+                            </div>
                         </div>
                     </div>
+                    <div class="card-body align-content-center">
+                        <div class="row justify-content-center text-justify">
+                            <div class="col-10">
+                                <p>Road safety in the <b>Australian Capital Territory (ACT)</b> is a key concern for both local authorities and residents. 
+                                Traffic offences such as speeding, red light violations, and dangerous driving significantly impact public safety. 
+                                In recent years, targeted initiatives and traffic camera systems have been deployed to monitor and reduce such offences.</p>
+                                <p>This analysis explores trends in <b>traffic offences</b> and the associated penalties, shedding light on how 
+                                fines and enforcement measures have evolved to improve road safety. With an emphasis on data collected from various locations across the ACT, 
+                                this study examines the impact of these measures on reducing violations and promoting safer driving habits.</p>
+                            </div>
+                        </div>
+                    </div>                                
                 </div>
-                <div class="card-body align-content-center">
-                    <div class="row justify-content-center text-justify">
-                        <div class="col-10">
-                            <p>Road safety in the <b>Australian Capital Territory (ACT)</b> is a key concern for both local authorities and residents. 
-                            Traffic offences such as speeding, red light violations, and dangerous driving significantly impact public safety. 
-                            In recent years, targeted initiatives and traffic camera systems have been deployed to monitor and reduce such offences.</p>
-                            <p>This analysis explores trends in <b>traffic offences</b> and the associated penalties, shedding light on how 
-                            fines and enforcement measures have evolved to improve road safety. With an emphasis on data collected from various locations across the ACT, 
-                            this study examines the impact of these measures on reducing violations and promoting safer driving habits.</p>
-                        </div>
-                    </div>
-                </div>                                
             </div>
         </div>
-    </div>
-    <div class="row pt-3 pb-5">
-        <div class="col-12">
-            <div class="row justify-content-center pt-3 pb-5"> <!-- Reduced padding at the top -->
-                <div class="col-12">
-                    <div class="card border-0 shadow-lg mb-4">
-                        <div class="card-header text-center">
-                            Map
-                        </div>
-                        <div class="card-body visualization-container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div id="map_visualisation_population"></div>
-                                    <p>This map illustrates the distribution of penalty amounts per capita across Australia from September 2017 to August 2024. The color intensity of each region indicates the severity of penalties imposed. As depicted, there is a significant disparity in penalty amounts between different regions. Eastern states generally exhibit higher penalties compared to Western and Northern territories. This could be attributed to various factors such as population density, traffic volume, and enforcement strategies.</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <div id="map_visual_vehicle"></div>
-                                    <p>This map showcases the penalty amounts per vehicle in Australia during the same period. Similar to the per capita analysis, regional variations are evident. Certain areas, particularly in the eastern states, have a higher concentration of penalties per vehicle. This suggests stricter enforcement or a higher rate of traffic violations in these regions.</p>
+        <div class="row pt-3 pb-5">
+            <div class="col-12">
+                <div class="row justify-content-center pt-3 pb-5"> <!-- Reduced padding at the top -->
+                    <div class="col-12">
+                        <div class="card border-0 shadow-lg mb-4">
+                            <div class="card-header text-center">
+                                Map
+                            </div>
+                            <div class="card-body visualization-container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div id="map_visualisation_population"></div>
+                                        <p>This map illustrates the distribution of penalty amounts per capita across Australia from September 2017 to August 2024. The color intensity of each region indicates the severity of penalties imposed. As depicted, there is a significant disparity in penalty amounts between different regions. Eastern states generally exhibit higher penalties compared to Western and Northern territories. This could be attributed to various factors such as population density, traffic volume, and enforcement strategies.</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="map_visual_vehicle"></div>
+                                        <p>This map showcases the penalty amounts per vehicle in Australia during the same period. Similar to the per capita analysis, regional variations are evident. Certain areas, particularly in the eastern states, have a higher concentration of penalties per vehicle. This suggests stricter enforcement or a higher rate of traffic violations in these regions.</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="map_slider"></div>
+                                        <p>This map visualization includes a slider to filter penalty amounts per capita by year. It allows users to explore how penalty amounts have changed over time from 2010 to 2024. The color intensity of each region indicates the severity of penalties imposed for the selected year, providing insights into temporal trends and regional variations in traffic enforcement.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card border-0 shadow-lg mb-4">
-                        <div class="card-header text-center">
-                          Sankey Diagram
-                        </div>
-                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
-                          <div id="sankey"></div>
-                        </div>
-                        <div class="card-body">
-                            <p>The Sankey diagram visualizes traffic offenses categorized by client type, offense description, and camera type. It highlights the distribution and frequency of various traffic violations detected by different types of cameras. The data includes offenses such as exceeding speed limits, running red lights, and using mobile devices while driving, recorded for different client types including diplomatic, government, and other organizations. This visualization helps in understanding the patterns and prevalence of traffic offenses across different categories.</p>
-                        </div>
+                </div>
+            </div>
+                <div class="card border-0 shadow-lg mb-4">
+                    <div class="card-header text-center">
+                        Sankey Diagram
                     </div>
-                    <!-- <div class="card border-0 shadow-lg mb-4">
-                        <div class="card-header text-center">
-                          Heatmap
-                        </div>
-                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
-                          <div id="heatmap"></div>
-                        </div>
+                    <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                        <div id="sankey"></div>
                     </div>
-
-                    <div class="card border-0 shadow-lg mb-4">
-                        <div class="card-header text-center">
-                          Sunburst
-                        </div>
-                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
-                          <div id="sun"></div>
-                        </div>
+                    <div class="card-body">
+                        <p>The Sankey diagram visualizes traffic offenses categorized by client type, offense description, and camera type. It highlights the distribution and frequency of various traffic violations detected by different types of cameras. The data includes offenses such as exceeding speed limits, running red lights, and using mobile devices while driving, recorded for different client types including diplomatic, government, and other organizations. This visualization helps in understanding the patterns and prevalence of traffic offenses across different categories.</p>
                     </div>
-                    <div class="card border-0 shadow-lg mb-4">
-                        <div class="card-header text-center">
-                          Bubble
-                        </div>
-                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
-                          <div id="bubble"></div>
-                        </div>
+                </div>
+                <!-- <div class="card border-0 shadow-lg mb-4">
+                    <div class="card-header text-center">
+                        Heatmap
                     </div>
-                    <div class="card border-0 shadow-lg mb-4">
-                        <div class="card-header text-center">
-                          Treemap
-                        </div>
-                        <div class="card-body visualization-container d-flex justify-content-center align-items-center">
-                          <div id="treemap"></div>
-                        </div>
-                    </div> -->
-                    <div class="card border-0 shadow-lg">
-                        <div class="card-footer pb-0 text-center footer-text">
-                            <p><b>Brian Nge</b></p>
-                            <p>Data Visualization 2</p>
-                            <p><span class="icon">&#9993;</span>:<a href="mailto:bnge0001@student.monash.com">bnge0001@student.monash.com</a></p>
-                            <p><span class="icon">&#128187;</span>:<a href="https://github.com/BrianNge341/FIT3179" target="_blank">BrianNge341/FIT3179</a></p>
-                        </div>
+                    <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                        <div id="heatmap"></div>
+                    </div>
+                </div>
+    
+                <div class="card border-0 shadow-lg mb-4">
+                    <div class="card-header text-center">
+                        Sunburst
+                    </div>
+                    <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                        <div id="sun"></div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-lg mb-4">
+                    <div class="card-header text-center">
+                        Bubble
+                    </div>
+                    <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                        <div id="bubble"></div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-lg mb-4">
+                    <div class="card-header text-center">
+                        Treemap
+                    </div>
+                    <div class="card-body visualization-container d-flex justify-content-center align-items-center">
+                        <div id="treemap"></div>
+                    </div>
+                </div> -->
+                <div class="card border-0 shadow-lg">
+                    <div class="card-footer pb-0 text-center footer-text">
+                        <p><b>Brian Nge</b></p>
+                        <p>Data Visualization 2</p>
+                        <p><span class="icon">&#9993;</span>:<a href="mailto:bnge0001@student.monash.com">bnge0001@student.monash.com</a></p>
+                        <p><span class="icon">&#128187;</span>:<a href="https://github.com/BrianNge341/FIT3179" target="_blank">BrianNge341/FIT3179</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

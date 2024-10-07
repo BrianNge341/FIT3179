@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A map visualization of penalty amounts per capita per state from September 2017 to August 2024.",
-  "title": "Penalty Amount Per Capita in Australia (September 2017 - August 2024)",
+  "title": "Penalty Amount (AUD) Per Capita in Australia (September 2017 - August 2024)",
   "width": 800,
   "height": 500,
   "autosize": {
@@ -36,7 +36,7 @@
           "lookup": "Rego_State",
           "from": {
             "data": {
-              "url": "data\\australia_map.topojson",
+              "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/data/australia_map.topojson",
               "format": {
                 "type": "topojson",
                 "feature": "collection"
@@ -45,6 +45,9 @@
             "key": "properties.State_Name",
             "fields": ["type", "geometry"]
           }
+        },
+        {
+          "filter": "isValid(datum.Penalty_Per_Capita) && (!StateFilter || datum.Rego_State == StateFilter)"
         }
       ],
       "mark": {
@@ -62,15 +65,82 @@
             "range": ["#f7fbff", "#e1f3ff", "#c6e9ff", "#a8ddff", "#8ad1ff", "#6bc5ff", "#4cb9ff", "#2dadff", "#0ea1ff", "#008cff", "#0077e6", "#0062cc", "#004db3", "#003899", "#002480", "#001066", "#00004d"]
           },
           "legend": {
-            "title": "Penalty Amount Per Capita"
+            "title": "Penalty Amount Per Capita (AUD)"
           }
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "State"},
-          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount (AUD)", "format": ","},
-          {"field": "Population", "type": "quantitative", "title": "Population", "format": ","},
-          {"field": "Penalty_Per_Capita", "type": "quantitative", "title": "Penalty Amount Per Capita (AUD)", "format": ",.4f"}
+          {"field": "Sum of Sum_Pen_Amt", "type": "quantitative", "title": "Penalty Amount (AUD)", "format": ",", "formatType": "number"},
+          {"field": "Population", "type": "quantitative", "title": "Population", "format": ",", "formatType": "number"},
+          {"field": "Penalty_Per_Capita", "type": "quantitative", "title": "Penalty Amount Per Capita (AUD)", "format": ",.4f", "formatType": "number"}
         ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"text": "Victoria", "longitude": 144, "latitude": -37.5},
+          {"text": "Northern Territory", "longitude": 133.5, "latitude": -21},
+          {"text": "South Australia", "longitude": 135, "latitude": -30},
+          {"text": "Western Australia", "longitude": 122, "latitude": -26},
+          {"text": "Queensland", "longitude": 144.479031, "latitude": -24},
+          {"text": "New South Wales", "longitude": 147, "latitude": -32.5},
+          {"text": "Tasmania", "longitude": 147.5, "latitude": -42.5},
+          {"text": "Australian Capital Territory", "longitude": 152, "latitude": -35.5}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 12,
+        "dy": -10
+      },
+      "encoding": {
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "StateFilter",
+      "value": null,
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "ACT",
+          "NSW",
+          "NT",
+          "QLD",
+          "SA",
+          "TAS",
+          "VIC",
+          "WA"
+        ],
+        "labels": [
+          "All",
+          "Australian Capital Territory",
+          "New South Wales",
+          "Northern Territory",
+          "Queensland",
+          "South Australia",
+          "Tasmania",
+          "Victoria",
+          "Western Australia"
+        ],
+        "name": "Select State: "
       }
     }
   ]
