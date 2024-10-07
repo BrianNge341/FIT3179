@@ -4,11 +4,11 @@
   "title": {
     "text": "Penalty Amount (AUD) Per Capita in Australia by Year",
     "anchor": "start",
-    "fontSize": 20,
+    "fontSize": 15,
     "dx": 30
   },
-  "width": 600,
-  "height": 500,
+  "width": 500,
+  "height": 400,
   "autosize": {
     "type": "fit",
     "contains": "padding"

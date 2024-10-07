@@ -1,0 +1,112 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A bar chart showing the total sum of fines for each state.",
+    "title": {
+        "text": "Total Sum of Fines for Each State",
+        "anchor": "middle",
+        "fontSize": 15
+    },
+    "padding": {"right": 50,
+                "left": 50,
+                "top": 50,
+                "bottom": 50},
+    "width": 800,
+    "height": 500,
+    "autosize": {
+        "type": "fit",
+        "contains": "padding"
+    },
+    "data": {
+        "url": "datasource//MonthlyAggregatedData.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "transform": [
+        {
+            "filter": {
+                "field": "Rego_State",
+                "oneOf": [
+                    "VIC",  
+                    "NT",  
+                    "SA",   
+                    "WA",   
+                    "QLD",  
+                    "NSW", 
+                    "TAS",  
+                    "ACT"  
+                ]
+            }
+        },
+        {
+            "aggregate": [
+                {
+                    "op": "sum",
+                    "field": "Sum_Pen_Amt",
+                    "as": "Total_Fines"
+                }
+            ],
+            "groupby": ["Rego_State"]
+        }
+    ],
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "Rego_State",
+                    "type": "nominal",
+                    "title": "State"
+                },
+                "y": {
+                    "field": "Total_Fines",
+                    "type": "quantitative",
+                    "title": "Total Sum of Fines"
+                },
+                "color": {
+                    "field": "Rego_State",
+                    "type": "nominal",
+                    "title": "State",
+                    "legend": {"title": "State"}
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "dy": -5,
+                "fontSize": 10
+            },
+            "encoding": {
+                "x": {
+                    "field": "Rego_State",
+                    "type": "nominal"
+                },
+                "y": {
+                    "field": "Total_Fines",
+                    "type": "quantitative"
+                },
+                "text": {
+                    "field": "Total_Fines",
+                    "type": "quantitative",
+                    "format": "$,.2f"
+                }
+            }
+        }
+    ],
+    "selection": {
+        "highlight": {
+            "type": "single",
+            "empty": "none",
+            "on": "mouseover",
+            "fields": ["Rego_State"]
+        }
+    },
+    "config": {
+        "mark": {
+            "tooltip": true
+        }
+    }
+}
