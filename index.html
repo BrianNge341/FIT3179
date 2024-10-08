@@ -51,20 +51,22 @@
                                 <br>
                                 <div class="row text-justify">
                                     <div class="col-md-4 ">
-                                        <div id="map_visualisation_population" style="margin-bottom:30px"></div>
+                                        <div id="map_visualisation_population"></div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="map_visual_vehicle" style="margin-bottom:30px"></div>
+                                        <div id="map_visual_vehicle"></div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="map_slider" style="margin-bottom:30px"></div>
+                                        <div id="map_slider"></div>
                                     </div>
-
+                                    <div class="col-md-12" style="text-align: center; margin-bottom: 15px;">
+                                            <em>The choropleth maps are interactive. Hover upon to view data for specific states.</em>
+                                    </div>
                                     <div class="col-md-8 ">
-                                        <p>There is a noticeable disparity in penalty amounts between different regions. The eastern states tend to have higher penalties compared to the western and northern territories. This difference can be linked to factors such as higher population density, increased traffic volume, and stricter enforcement strategies. The eastern part of the country, which includes major cities like Sydney and Brisbane, is more densely populated and frequently visited (<a href="https://www.johnmason.com/blog/moving-to-australia-east-west-or-south-coast/">source</a>). Additionally, road rules for learner ('L') and provisional ('P') drivers are generally consistent when traveling between the ACT and NSW (<a href="https://www.police.act.gov.au/road-safety/act-learner-and-provisional-drivers">source</a>), contributing to NSW having the highest distribution of penalties per capita during this period.</p>
+                                        <p>There is a noticeable disparity in penalty amounts between different regions. The eastern states tend to have higher penalties compared to the western and northern territories. This difference can be linked to factors such as higher population density, increased traffic volume, and stricter enforcement strategies. The eastern part of the country, which includes major cities like Sydney and Brisbane, is more densely populated and frequently visited (<a href="https://www.johnmason.com/blog/moving-to-australia-east-west-or-south-coast/">source by John Mason</a>). Additionally, road rules for learner ('L') and provisional ('P') drivers are generally consistent when traveling between the ACT and NSW (<a href="https://www.police.act.gov.au/road-safety/act-learner-and-provisional-drivers">source by ACT police</a>), contributing to NSW having the highest distribution of penalties per capita during this period.</p>
                                     </div>
                                     <div class="col-md-4">
-                                        <p>There is a steady increase in penalty amounts per capita in the ACT over the years. This rise is linked to a growing number of drivers detected for speeding and drug use, trends that have been recorded since 2008 (<a href="https://www.drive.com.au/news/police-traffic-infringement-data-reveals-road-safety-worrying-trends/">source</a>). Increased enforcement efforts, particularly around speeding and drug-related offences, have contributed to the rise in fines. Nationally, eastern states like New South Wales tend to have higher penalties due to factors such as population density and traffic volume, while Western and Northern territories see lower penalties.</p>
+                                        <p>There is a steady increase in penalty amounts per capita in the ACT over the years. This rise is linked to a growing number of drivers detected for speeding and drug use, trends that have been recorded since 2008 (<a href="https://www.drive.com.au/news/police-traffic-infringement-data-reveals-road-safety-worrying-trends/">source by Drive Australia</a>). Increased enforcement efforts, particularly around speeding and drug-related offences, have contributed to the rise in fines. Nationally, eastern states like New South Wales tend to have higher penalties due to factors such as population density and traffic volume, while Western and Northern territories see lower penalties.</p>
                                     </div>
                                 </div>
                             
@@ -73,24 +75,35 @@
                                 <div style="text-align: center;">
                                     <em>This Sankey diagram is interactive. Click specific sections to view the flow.</em>
                                 </div>
-
-                                <p class="mt-4 text-justify">The Sankey diagram visualizes traffic offenses categorized by client type, offense description, and camera type. It highlights the distribution and frequency of various traffic violations detected by different types of cameras. The data includes offenses such as exceeding speed limits, running red lights, and using mobile devices while driving, recorded for different client types including diplomatic, government, and other organizations. This visualization helps in understanding the patterns and prevalence of traffic offenses across different categories.</p>
-                                <div class="d-flex align-items-start">
-                                    <div id="linechart" style="flex: 1;"></div>
-                                    <div style="flex: 1; margin-top: 40px">
-                                        <p class="text-justify">This is an interactive line chart showing the number of traffic infringements from other states in ACT over time.</p>
-                                        <p class="text-justify">After the introduction of the 40 kilometers per hour speed limit in parts of Canberra's city center in late June 2021, there was a significant increase in the number of traffic infringements issued. However, the ACT Legislative Assembly inquiry recommended waiving some of the speeding fines incurred during this period, especially for those who faced financial hardship. This decision, along with increased public awareness and better communication about the new speed limits, likely contributed to a reduction in traffic infringements in the following years. Additionally, the government's efforts to improve road safety by expanding the 40 kilometers per hour speed limit areas and implementing the ACT Road Safety Action Plan may have led to better compliance with traffic regulations. As a result, the number of traffic infringements in ACT dropped from 20,493 in 2021 to 7,096 after 2021, reflecting the positive impact of these measures on road safety and driver behavior.</p>
-                                    </div>
+                                <p class="mt-4 text-justify">"Other Persons" accounts for the highest number of offences, with the flow being significantly larger for almost every type of violation. This category’s dominant presence in the Sankey diagram shows that non-government and non-diplomatic organizations contribute disproportionately to the overall offence count. A disproportionate number of traffic offences committed by the "Other Persons" category particularly for speeding violations in non-school zones (<= 15 km/h over the limit) are captured predominantly by fixed and mobile speed cameras. This aligns with broader research suggesting that speeding remains one of the most frequent traffic infringements in Australia, especially in areas monitored by automated enforcement devices such as speed cameras (<a href="https://www.trafficlawyersperthwide.com.au/blog/what-is-the-most-common-traffic-offence-in-australia/">source by Traffic Lawyers Perth</a>).</p>
+                                <div class="row text-justify">
+                                <div class="col-md-7">
+                                    <div id="linechart"></div>
                                 </div>
+                                <div class="col-md-5" style="margin-top: 30px;">
+                                        <p class="text-justify">After the introduction of the 60 kilometers per hour to 40 kilometers per hour speed limit in parts of Canberra's city center in late June 2021, there was a significant increase in the number of traffic infringements issued (<a href="https://www.abc.net.au/news/2022-01-22/act-government-inqury-suggests-waiving-some-canberra-speed-fines/100774004">source by ABC News</a>). However, the ACT Legislative Assembly inquiry recommended waiving some of the speeding fines incurred during this period, especially for those who faced financial hardship . This decision, along with increased public awareness and better communication about the new speed limits, likely contributed to a reduction in traffic infringements in the following months and years. Additionally, the government's efforts to improve road safety by expanding the 40 kilometers per hour speed limit areas and implementing the ACT Road Safety Action Plan may have led to better compliance with traffic regulations. As a result, the number of traffic infringements in ACT dropped from 20,493 in July 2021 to 7,096 after July 2021, reflecting the positive impact of these measures on road safety and driver behavior.</p>
+                                </div>
+                                </div>
+                                    <em>This is an interactive line chart showing the number of traffic infringements from other states in ACT over time.</em>
 
-                                <h2 id="conclusion" class="text-center font-weight-bold">Conclusion</h2>
-                                <div class="d-flex align-items-start">
+                                <h2 id="conclusion" class="text-center font-weight-bold" style="margin-top: 20px; margin-bottom: 30px;">Conclusion</h2>
+                                <!-- <div class="d-flex align-items-start">
                                     <div id="barchart" style="flex: 1;"></div>
                                     <div style="flex: 1; margin-top: 40px">
                                         <p class="text-justify">This is an interactive line chart showing the number of traffic infringements from other states in ACT over time.</p>
                                         <p class="text-justify">After the introduction of the 40 kilometers per hour speed limit in parts of Canberra's city center in late June 2021, there was a significant increase in the number of traffic infringements issued. However, the ACT Legislative Assembly inquiry recommended waiving some of the speeding fines incurred during this period, especially for those who faced financial hardship. This decision, along with increased public awareness and better communication about the new speed limits, likely contributed to a reduction in traffic infringements in the following years. Additionally, the government's efforts to improve road safety by expanding the 40 kilometers per hour speed limit areas and implementing the ACT Road Safety Action Plan may have led to better compliance with traffic regulations. As a result, the number of traffic infringements in ACT dropped from 20,493 in 2021 to 7,096 after 2021, reflecting the positive impact of these measures on road safety and driver behavior.</p>
                                     </div>
+                                </div> -->
+                                <div class="row text-justify">
+                                <div class="col-md-7">
+                                    <div id="barchart"></div>
                                 </div>
+                                <div class="col-md-5">
+                                    <p class="text-justify">After the introduction of the 40 kilometers per hour speed limit in parts of Canberra's city center in late June 2021, there was a significant increase in the number of traffic infringements issued. However, the ACT Legislative Assembly inquiry recommended waiving some of the speeding fines incurred during this period, especially for those who faced financial hardship. This decision, along with increased public awareness and better communication about the new speed limits, likely contributed to a reduction in traffic infringements in the following years. Additionally, the government's efforts to improve road safety by expanding the 40 kilometers per hour speed limit areas and implementing the ACT Road Safety Action Plan may have led to better compliance with traffic regulations. As a result, the number of traffic infringements in ACT dropped from 20,493 in 2021 to 7,096 after 2021, reflecting the positive impact of these measures on road safety and driver behavior.</p>
+                                </div>
+                                <em>This is an interactive line chart showing the number of traffic infringements from other states in ACT over time.</em>
+                                </div>
+                                
                             </div>
                             </div>
                         </div>

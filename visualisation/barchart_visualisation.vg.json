@@ -7,9 +7,7 @@
         "fontSize": 15
     },
     "padding": {"right": 50,
-                "left": 50,
-                "top": 50,
-                "bottom": 50},
+                "left": 50},
     "width": 800,
     "height": 500,
     "autosize": {
@@ -94,6 +92,36 @@
                     "format": "$,.2f"
                 }
             }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": 5,
+                "dy": -40,
+                "fontSize": 12,
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Rego_State",
+                    "type": "nominal",
+                    "title": "State",
+                    "axis": {"labelAngle": 0}
+                },
+                "y": {
+                    "field": "Total_Fines",
+                    "type": "quantitative",
+                    "title": "Total Fines (AUD)"
+                },
+                "text": {
+                    "value":  ["Drivers from NSW contributed to the highest", "amount of fines among interstate drivers"]
+                }
+            },
+            "transform": [
+                {"filter": "datum.Rego_State == 'NSW'"}
+            ]
         }
     ],
     "selection": {

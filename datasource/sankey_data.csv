@@ -88,75 +88,75 @@ Government Client,School Zone  Exceed Speed Limit By <= 15 Km/H,MOBILE SPEED CAM
 Government Client,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,21
 Government Client,School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,7
 Government Client,School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,1
-OTHER ORGN,300 (1) Driver using mobile device,MOBILE DEVICE DETECTION CAMERA,3580
-OTHER ORGN,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,1568
-OTHER ORGN,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,341
-OTHER ORGN,Enter Intersection When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,2
-OTHER ORGN,Enter Intersection When Traffic Light Red,RED LIGHT AND SPEED CAMERA,3
-OTHER ORGN,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,442
-OTHER ORGN,Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,1635
-OTHER ORGN,Non-School Zone Exceed Speed Limit <= 15 Km/H,FIXED ONLY SPEED CAMERA,6272
-OTHER ORGN,Non-School Zone Exceed Speed Limit <= 15 Km/H,MOBILE SPEED CAMERA,3281
-OTHER ORGN,Non-School Zone Exceed Speed Limit <= 15 Km/H,POINT TO POINT CAMERA,812
-OTHER ORGN,Non-School Zone Exceed Speed Limit <= 15 Km/H,RED LIGHT AND SPEED CAMERA,3044
-OTHER ORGN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,1624
-OTHER ORGN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,1744
-OTHER ORGN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,POINT TO POINT CAMERA,171
-OTHER ORGN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,RED LIGHT AND SPEED CAMERA,1517
-OTHER ORGN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,FIXED ONLY SPEED CAMERA,249
-OTHER ORGN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,101
-OTHER ORGN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,POINT TO POINT CAMERA,42
-OTHER ORGN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,RED LIGHT AND SPEED CAMERA,95
-OTHER ORGN,Non-School Zone Exceed Speed Limit By > 45 Km/H,FIXED ONLY SPEED CAMERA,213
-OTHER ORGN,Non-School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,24
-OTHER ORGN,Non-School Zone Exceed Speed Limit By > 45 Km/H,POINT TO POINT CAMERA,11
-OTHER ORGN,Non-School Zone Exceed Speed Limit By > 45 Km/H,RED LIGHT AND SPEED CAMERA,41
-OTHER ORGN,Non-school zone exceed speed limit by <= 15km/h,FIXED ONLY SPEED CAMERA,13274
-OTHER ORGN,Non-school zone exceed speed limit by <= 15km/h,MOBILE SPEED CAMERA,11210
-OTHER ORGN,Non-school zone exceed speed limit by <= 15km/h,POINT TO POINT CAMERA,2355
-OTHER ORGN,Non-school zone exceed speed limit by <= 15km/h,RED LIGHT AND SPEED CAMERA,30298
-OTHER ORGN,Proceed When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,79
-OTHER ORGN,Proceed When Traffic Light Red,RED LIGHT AND SPEED CAMERA,80
-OTHER ORGN,School Zone  Exceed Speed Limit By <= 15 Km/H,FIXED ONLY SPEED CAMERA,4
-OTHER ORGN,School Zone  Exceed Speed Limit By <= 15 Km/H,MOBILE SPEED CAMERA,6620
-OTHER ORGN,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,1
-OTHER ORGN,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,766
-OTHER ORGN,School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,10
-OTHER PRSN,300 (1) Driver using mobile device,MOBILE DEVICE DETECTION CAMERA,16283
-OTHER PRSN,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,12227
-OTHER PRSN,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,2342
-OTHER PRSN,Enter Intersection When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,77
-OTHER PRSN,Enter Intersection When Traffic Light Red,RED LIGHT AND SPEED CAMERA,346
-OTHER PRSN,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,9933
-OTHER PRSN,Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,26992
-OTHER PRSN,Non-School Zone Exceed Speed Limit <= 15 Km/H,FIXED ONLY SPEED CAMERA,150194
-OTHER PRSN,Non-School Zone Exceed Speed Limit <= 15 Km/H,MOBILE SPEED CAMERA,72289
-OTHER PRSN,Non-School Zone Exceed Speed Limit <= 15 Km/H,POINT TO POINT CAMERA,15420
-OTHER PRSN,Non-School Zone Exceed Speed Limit <= 15 Km/H,RED LIGHT AND SPEED CAMERA,115211
-OTHER PRSN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,17968
-OTHER PRSN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,15670
-OTHER PRSN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,POINT TO POINT CAMERA,1447
-OTHER PRSN,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,RED LIGHT AND SPEED CAMERA,16445
-OTHER PRSN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,FIXED ONLY SPEED CAMERA,1742
-OTHER PRSN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,866
-OTHER PRSN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,POINT TO POINT CAMERA,148
-OTHER PRSN,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,RED LIGHT AND SPEED CAMERA,847
-OTHER PRSN,Non-School Zone Exceed Speed Limit By > 45 Km/H,FIXED ONLY SPEED CAMERA,1364
-OTHER PRSN,Non-School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,248
-OTHER PRSN,Non-School Zone Exceed Speed Limit By > 45 Km/H,POINT TO POINT CAMERA,33
-OTHER PRSN,Non-School Zone Exceed Speed Limit By > 45 Km/H,RED LIGHT AND SPEED CAMERA,301
-OTHER PRSN,Non-school zone exceed speed limit by <= 15km/h,FIXED ONLY SPEED CAMERA,80987
-OTHER PRSN,Non-school zone exceed speed limit by <= 15km/h,MOBILE SPEED CAMERA,78703
-OTHER PRSN,Non-school zone exceed speed limit by <= 15km/h,POINT TO POINT CAMERA,15279
-OTHER PRSN,Non-school zone exceed speed limit by <= 15km/h,RED LIGHT AND SPEED CAMERA,201075
-OTHER PRSN,Proceed When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,3100
-OTHER PRSN,Proceed When Traffic Light Red,RED LIGHT AND SPEED CAMERA,3768
-OTHER PRSN,School Zone  Exceed Speed Limit By <= 15 Km/H,FIXED ONLY SPEED CAMERA,35
-OTHER PRSN,School Zone  Exceed Speed Limit By <= 15 Km/H,MOBILE SPEED CAMERA,48667
-OTHER PRSN,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,3
-OTHER PRSN,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,5325
-OTHER PRSN,School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,115
-OTHER PRSN,School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,8
+Other organisation,300 (1) Driver using mobile device,MOBILE DEVICE DETECTION CAMERA,3580
+Other organisation,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,1568
+Other organisation,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,341
+Other organisation,Enter Intersection When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,2
+Other organisation,Enter Intersection When Traffic Light Red,RED LIGHT AND SPEED CAMERA,3
+Other organisation,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,442
+Other organisation,Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,1635
+Other organisation,Non-School Zone Exceed Speed Limit <= 15 Km/H,FIXED ONLY SPEED CAMERA,6272
+Other organisation,Non-School Zone Exceed Speed Limit <= 15 Km/H,MOBILE SPEED CAMERA,3281
+Other organisation,Non-School Zone Exceed Speed Limit <= 15 Km/H,POINT TO POINT CAMERA,812
+Other organisation,Non-School Zone Exceed Speed Limit <= 15 Km/H,RED LIGHT AND SPEED CAMERA,3044
+Other organisation,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,1624
+Other organisation,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,1744
+Other organisation,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,POINT TO POINT CAMERA,171
+Other organisation,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,RED LIGHT AND SPEED CAMERA,1517
+Other organisation,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,FIXED ONLY SPEED CAMERA,249
+Other organisation,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,101
+Other organisation,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,POINT TO POINT CAMERA,42
+Other organisation,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,RED LIGHT AND SPEED CAMERA,95
+Other organisation,Non-School Zone Exceed Speed Limit By > 45 Km/H,FIXED ONLY SPEED CAMERA,213
+Other organisation,Non-School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,24
+Other organisation,Non-School Zone Exceed Speed Limit By > 45 Km/H,POINT TO POINT CAMERA,11
+Other organisation,Non-School Zone Exceed Speed Limit By > 45 Km/H,RED LIGHT AND SPEED CAMERA,41
+Other organisation,Non-school zone exceed speed limit by <= 15km/h,FIXED ONLY SPEED CAMERA,13274
+Other organisation,Non-school zone exceed speed limit by <= 15km/h,MOBILE SPEED CAMERA,11210
+Other organisation,Non-school zone exceed speed limit by <= 15km/h,POINT TO POINT CAMERA,2355
+Other organisation,Non-school zone exceed speed limit by <= 15km/h,RED LIGHT AND SPEED CAMERA,30298
+Other organisation,Proceed When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,79
+Other organisation,Proceed When Traffic Light Red,RED LIGHT AND SPEED CAMERA,80
+Other organisation,School Zone  Exceed Speed Limit By <= 15 Km/H,FIXED ONLY SPEED CAMERA,4
+Other organisation,School Zone  Exceed Speed Limit By <= 15 Km/H,MOBILE SPEED CAMERA,6620
+Other organisation,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,1
+Other organisation,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,766
+Other organisation,School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,10
+Other Person,300 (1) Driver using mobile device,MOBILE DEVICE DETECTION CAMERA,16283
+Other Person,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,12227
+Other Person,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,2342
+Other Person,Enter Intersection When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,77
+Other Person,Enter Intersection When Traffic Light Red,RED LIGHT AND SPEED CAMERA,346
+Other Person,Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,9933
+Other Person,Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,26992
+Other Person,Non-School Zone Exceed Speed Limit <= 15 Km/H,FIXED ONLY SPEED CAMERA,150194
+Other Person,Non-School Zone Exceed Speed Limit <= 15 Km/H,MOBILE SPEED CAMERA,72289
+Other Person,Non-School Zone Exceed Speed Limit <= 15 Km/H,POINT TO POINT CAMERA,15420
+Other Person,Non-School Zone Exceed Speed Limit <= 15 Km/H,RED LIGHT AND SPEED CAMERA,115211
+Other Person,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,17968
+Other Person,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,15670
+Other Person,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,POINT TO POINT CAMERA,1447
+Other Person,Non-School Zone Exceed Speed Limit > 15 But <= 30 Km/H,RED LIGHT AND SPEED CAMERA,16445
+Other Person,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,FIXED ONLY SPEED CAMERA,1742
+Other Person,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,866
+Other Person,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,POINT TO POINT CAMERA,148
+Other Person,Non-School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,RED LIGHT AND SPEED CAMERA,847
+Other Person,Non-School Zone Exceed Speed Limit By > 45 Km/H,FIXED ONLY SPEED CAMERA,1364
+Other Person,Non-School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,248
+Other Person,Non-School Zone Exceed Speed Limit By > 45 Km/H,POINT TO POINT CAMERA,33
+Other Person,Non-School Zone Exceed Speed Limit By > 45 Km/H,RED LIGHT AND SPEED CAMERA,301
+Other Person,Non-school zone exceed speed limit by <= 15km/h,FIXED ONLY SPEED CAMERA,80987
+Other Person,Non-school zone exceed speed limit by <= 15km/h,MOBILE SPEED CAMERA,78703
+Other Person,Non-school zone exceed speed limit by <= 15km/h,POINT TO POINT CAMERA,15279
+Other Person,Non-school zone exceed speed limit by <= 15km/h,RED LIGHT AND SPEED CAMERA,201075
+Other Person,Proceed When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,3100
+Other Person,Proceed When Traffic Light Red,RED LIGHT AND SPEED CAMERA,3768
+Other Person,School Zone  Exceed Speed Limit By <= 15 Km/H,FIXED ONLY SPEED CAMERA,35
+Other Person,School Zone  Exceed Speed Limit By <= 15 Km/H,MOBILE SPEED CAMERA,48667
+Other Person,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,FIXED ONLY SPEED CAMERA,3
+Other Person,School Zone Exceed Speed Limit By > 15 But <= 30 Km/H,MOBILE SPEED CAMERA,5325
+Other Person,School Zone Exceed Speed Limit By > 30 But <= 45 Km/H,MOBILE SPEED CAMERA,115
+Other Person,School Zone Exceed Speed Limit By > 45 Km/H,MOBILE SPEED CAMERA,8
 Religious or Charitable Client,300 (1) Driver using mobile device,MOBILE DEVICE DETECTION CAMERA,28
 Religious or Charitable Client,59 (1) Enter Intersection or Marked Foot Crossing When Traffic Light Red,RED LIGHT AND SPEED CAMERA,16
 Religious or Charitable Client,60 Enter Intersection or Marked Foot Crossing When Traffic Arrow Red,RED LIGHT AND SPEED CAMERA,5
