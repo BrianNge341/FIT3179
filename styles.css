@@ -30,14 +30,8 @@ body {
 }
 
 .card {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     border: none;
-    transition: box-shadow 0.3s;
-}
-
-.card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
@@ -53,10 +47,6 @@ body {
     padding-right: 100px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2rem;
-}
-
-#bar_chart {
-    height: 400px;
 }
 
 .github-btn {
@@ -86,6 +76,10 @@ body {
 
 .footer-text a:hover {
     text-decoration: underline;
+}
+
+b {
+    font-weight: bold !important;
 }
 
 .footer-text .icon {

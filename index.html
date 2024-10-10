@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="visualisations.js" defer></script>
 </head>
+
 <body class="d-flex flex-column min-vh-100">
     <div class="container-fluid font-weight-light p-0">
         <div class="row header-container">
@@ -19,141 +21,203 @@
                 <div class="card border-0 shadow-lg mb-4 rounded">
                     <div class="card-header bg-dark text-white text-center">
                         <div class="github-btn position-absolute" style="top: 10px; right: 10px;">
-                            <a aria-label="Follow on GitHub" class="github-button"
-                               data-size="large" href="https://github.com/BrianNge341/FIT3179">Visit Project</a>
+                            <a aria-label="Follow on GitHub" class="github-button" data-size="large"
+                                href="https://github.com/BrianNge341/FIT3179">Visit Project</a>
                         </div>
                         <h1>Road Safety in Australian Capital Territory</h1>
                         <h4>Analysis Based On Traffic Offences</h4>
                         <div class="btn-group" role="group" aria-label="Navigation Buttons">
-                            <a class="btn btn-primary btn-spacing" href="#map_section">Overview</a>
-                            <a class="btn btn-primary btn-spacing" href="#sankey_section">Analysis</a>
-                            <a class="btn btn-primary" href="#conclusion">Conclusion</a>
+                            <a class="btn btn-light btn-spacing" href="#map_section">Overview</a>
+                            <a class="btn btn-light btn-spacing" href="#sankey_section">Analysis</a>
+                            <a class="btn btn-light" href="#conclusion">Conclusion</a>
                         </div>
                     </div>
                     <div class="card-body align-content-center">
-                            <div class="card-body visualization-container">
-                                <div class="row">
-                                    <div class="col-md-9 text-justify">
-                                        <p>Road safety in the <b>Australian Capital Territory (ACT)</b> is a key concern for both local authorities and residents. 
-                                        Traffic offences such as speeding, red light violations, and dangerous driving significantly impact public safety. 
-                                        In recent years, targeted initiatives and traffic camera systems have been deployed to monitor and reduce such offences.</p>
-                                        <p>This data visualisation explores trends in <b>traffic offences</b> and the associated penalties, shedding light on how 
-                                        fines and enforcement measures have evolved to improve road safety. With an emphasis on data collected from various locations across the ACT, 
-                                        this study examines the impact of these measures on reducing violations and promoting safer driving habits.</p>
-                                    </div>
-                                    <div class="col-md-2 d-flex justify-content-center">
-                                        <img src="data/roadsafety.jpg" class="img-fluid custom-img-size" alt="Road Safety">
-                                    </div>
+                        <div class="card-body visualization-container">
+                            <div class="row">
+                                <div class="col-md-9 text-justify">
+                                    <p>Road safety in the <b>Australian Capital Territory (ACT)</b> is a key concern for
+                                        both local authorities and residents.
+                                        Traffic offences such as speeding, red light violations, and dangerous driving
+                                        significantly impact public safety.
+                                        In recent years, targeted initiatives and traffic camera systems have been
+                                        deployed to monitor and reduce such offences.</p>
+                                    <p>This data visualisation explores trends in traffic offences and the
+                                        associated penalties, shedding light on how
+                                        fines and enforcement measures have evolved to improve road safety. With an
+                                        emphasis on data collected from various locations across the ACT,
+                                        this study examines the impact of these measures on reducing violations and
+                                        promoting safer driving habits.</p>
                                 </div>
-                                
-                                <h2 id="map_section" class="text-center font-weight-bold">Overview</h2>
-                                <p class="mt-4 text-justify">These choropleth maps provide a comprehensive overview of traffic penalties across Australia, highlighting regional disparities and temporal trends. These visualizations offer valuable insights into the effectiveness of enforcement measures and the impact of population density and traffic volume on penalty amounts.</p>
-                                <br>
-                                <div class="row text-justify">
-                                    <div class="col-md-4 ">
-                                        <div id="map_visualisation_population"></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div id="map_visual_vehicle"></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div id="map_slider"></div>
-                                    </div>
-                                    <div class="col-md-12" style="text-align: center; margin-bottom: 15px;">
-                                            <em>The choropleth maps are interactive. Hover upon to view data for specific states.</em>
-                                    </div>
-                                    <div class="col-md-8 ">
-                                        <p>There is a noticeable disparity in penalty amounts between different regions. The eastern states tend to have higher penalties compared to the western and northern territories. This difference can be linked to factors such as higher population density, increased traffic volume, and stricter enforcement strategies. The eastern part of the country, which includes major cities like Sydney and Brisbane, is more densely populated and frequently visited (<a href="https://www.johnmason.com/blog/moving-to-australia-east-west-or-south-coast/">source by John Mason</a>). Additionally, road rules for learner ('L') and provisional ('P') drivers are generally consistent when traveling between the ACT and NSW (<a href="https://www.police.act.gov.au/road-safety/act-learner-and-provisional-drivers">source by ACT police</a>), contributing to NSW having the highest distribution of penalties per capita during this period.</p>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <p>There is a steady increase in penalty amounts per capita in the ACT over the years. This rise is linked to a growing number of drivers detected for speeding and drug use, trends that have been recorded since 2008 (<a href="https://www.drive.com.au/news/police-traffic-infringement-data-reveals-road-safety-worrying-trends/">source by Drive Australia</a>). Increased enforcement efforts, particularly around speeding and drug-related offences, have contributed to the rise in fines. Nationally, eastern states like New South Wales tend to have higher penalties due to factors such as population density and traffic volume, while Western and Northern territories see lower penalties.</p>
-                                    </div>
+                                <div class="col-md-2 d-flex justify-content-center">
+                                    <img src="data/roadsafety.jpg" class="img-fluid custom-img-size" alt="Road Safety">
                                 </div>
-                            
-                                <h2 id="sankey_section" class="text-center font-weight-bold">Analysis</h2>
-                                <div id="sankey" class="d-flex justify-content-center align-items-center"></div>
-                                <div style="text-align: center;">
-                                    <em>This Sankey diagram is interactive. Click specific sections to view the flow.</em>
+                            </div>
+
+                            <h2 id="map_section" class="text-center font-weight-bold">Overview</h2>
+                            <p class="mt-4 text-justify">These <b>choropleth maps</b> provide a comprehensive overview
+                                of
+                                traffic penalties across Australia, highlighting regional disparities and temporal
+                                trends. These visualizations offer valuable insights into the effectiveness of
+                                enforcement measures and the impact of population density and traffic volume on penalty
+                                amounts.</p>
+                            <br>
+                            <div class="row text-justify">
+                                <div class="col-md-4 ">
+                                    <div id="map_visualisation_population"></div>
                                 </div>
-                                <p class="mt-4 text-justify">"Other Persons" accounts for the highest number of offences, with the flow being significantly larger for almost every type of violation. This category’s dominant presence in the Sankey diagram shows that non-government and non-diplomatic organizations contribute disproportionately to the overall offence count. A disproportionate number of traffic offences committed by the "Other Persons" category particularly for speeding violations in non-school zones (<= 15 km/h over the limit) are captured predominantly by fixed and mobile speed cameras. This aligns with broader research suggesting that speeding remains one of the most frequent traffic infringements in Australia, especially in areas monitored by automated enforcement devices such as speed cameras (<a href="https://www.trafficlawyersperthwide.com.au/blog/what-is-the-most-common-traffic-offence-in-australia/">source by Traffic Lawyers Perth</a>).</p>
-                                <div class="row text-justify">
+                                <div class="col-md-4">
+                                    <div id="map_visual_vehicle"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div id="map_slider"></div>
+                                </div>
+                                <div class="col-md-12" style="text-align: center; margin-bottom: 15px;">
+                                    <em>The choropleth maps are interactive. Hover upon to view data for specific
+                                        states.</em>
+                                </div>
+                                <div class="col-md-8 ">
+                                    <p>There is a <b>noticeable disparity</b> in penalty amounts between different
+                                        regions. The
+                                        eastern states tend to have higher penalties compared to the western and
+                                        northern territories. This difference can be linked to factors such as <b>higher
+                                            population density, increased traffic volume, and stricter enforcement
+                                            strategies</b>. The eastern part of the country, which includes major cities
+                                        like
+                                        Sydney and Brisbane, is more densely populated and frequently visited (<a
+                                            href="https://www.johnmason.com/blog/moving-to-australia-east-west-or-south-coast/">source
+                                            by John Mason</a>). Additionally, road rules for learner ('L') and
+                                        provisional ('P') drivers are generally consistent when traveling between the
+                                        ACT and NSW (<a
+                                            href="https://www.police.act.gov.au/road-safety/act-learner-and-provisional-drivers">source
+                                            by ACT police</a>), contributing to NSW having the <b>highest distribution
+                                            of
+                                            penalties per capita</b> during this period.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p>There is a <b>steady increase in penalty amounts per capita</b> in the <b>ACT</b>
+                                        over the
+                                        years. This rise is linked to a growing number of drivers detected for speeding
+                                        and drug use, trends that have been recorded since 2008 (<a
+                                            href="https://www.drive.com.au/news/police-traffic-infringement-data-reveals-road-safety-worrying-trends/">source
+                                            by Drive Australia</a>). Increased enforcement efforts, particularly around
+                                        speeding and drug-related offences, have contributed to the rise in fines.
+                                        Nationally, eastern states like New South Wales tend to have <b>higher penalties
+                                            due to factors such as population density and traffic volume</b>, while
+                                        Western and
+                                        Northern territories see lower penalties.</p>
+                                </div>
+                            </div>
+
+                            <h2 id="sankey_section" class="text-center font-weight-bold">Analysis</h2>
+                            <div id="sankey" class="d-flex justify-content-center align-items-center"></div>
+                            <div style="text-align: center;">
+                                <em>These Sankey diagram is interactive. Click specific sections to view the flow.</em>
+                            </div>
+                            <p class="mt-4 text-justify"><b>"Other Persons"</b> accounts for the <b>highest number of
+                                    offences</b>,
+                                with the flow being significantly larger for almost every type of violation. This
+                                category’s dominant presence shows that non-government and
+                                non-diplomatic organizations contribute disproportionately to the overall offence count.
+                                A disproportionate number of traffic offences committed by the "Other Persons" category
+                                particularly for speeding violations in non-school zones (<= 15 km/h over the limit) are
+                                    captured predominantly by fixed and mobile speed cameras. <b>This aligns with
+                                    broader
+                                    research</b> suggesting that speeding remains one of the most frequent traffic
+                                    infringements in Australia, especially in areas monitored by automated enforcement
+                                    devices such as speed cameras (<a
+                                        href="https://www.trafficlawyersperthwide.com.au/blog/what-is-the-most-common-traffic-offence-in-australia/">
+                                        source by Traffic Lawyers Perth</a>).</p>
+                            <div class="row text-justify">
                                 <div class="col-md-7">
                                     <div id="linechart"></div>
                                 </div>
                                 <div class="col-md-5" style="margin-top: 30px;">
-                                        <p class="text-justify">After the introduction of the 60 kilometers per hour to 40 kilometers per hour speed limit in parts of Canberra's city center in late June 2021, there was a significant increase in the number of traffic infringements issued (<a href="https://www.abc.net.au/news/2022-01-22/act-government-inqury-suggests-waiving-some-canberra-speed-fines/100774004">source by ABC News</a>). However, the ACT Legislative Assembly inquiry recommended waiving some of the speeding fines incurred during this period, especially for those who faced financial hardship . This decision, along with increased public awareness and better communication about the new speed limits, likely contributed to a reduction in traffic infringements in the following months and years. Additionally, the government's efforts to improve road safety by expanding the 40 kilometers per hour speed limit areas and implementing the ACT Road Safety Action Plan may have led to better compliance with traffic regulations. As a result, the number of traffic infringements in ACT dropped from 20,493 in July 2021 to 7,096 after July 2021, reflecting the positive impact of these measures on road safety and driver behavior.</p>
+                                    <p class="text-justify">After the introduction of the <b>60 kilometers per hour</b>
+                                        to
+                                        <b>40 kilometers per hour speed limit</b> in parts of Canberra's city center in
+                                        <b>late June 2021</b>, there was a <b>significant increase</b> in the number of
+                                        traffic
+                                        infringements issued (<a
+                                            href="https://www.abc.net.au/news/2022-01-22/act-government-inqury-suggests-waiving-some-canberra-speed-fines/100774004">source
+                                            by ABC News</a>). However, the ACT Legislative Assembly inquiry
+                                        recommended waiving some of the speeding fines incurred during this
+                                        period, especially for those who faced financial hardship. This decision,
+                                        along with <b>increased public awareness and better communication</b> about the
+                                        new speed limits, likely contributed to a <b>reduction in traffic
+                                            infringements</b> in the following months and years. Additionally, the
+                                        government's efforts to improve road safety by expanding the <b>40
+                                            kilometers per hour speed limit areas</b> and implementing the ACT Road
+                                        Safety Action Plan may have led to better compliance with traffic
+                                        regulations. As a result, the number of traffic infringements in ACT dropped
+                                        from <b>20,493 in July 2021 to 7,096 after July 2021</b>, reflecting the
+                                        positive impact of these measures on road safety and driver behavior.
+                                    </p>
                                 </div>
-                                </div>
-                                    <em>This is an interactive line chart showing the number of traffic infringements from other states in ACT over time.</em>
+                            </div>
+                            <em>This is an interactive line chart showing the number of traffic infringements from other
+                                states in ACT over time.</em>
 
-                                <h2 id="conclusion" class="text-center font-weight-bold" style="margin-top: 20px; margin-bottom: 30px;">Conclusion</h2>
-                                <!-- <div class="d-flex align-items-start">
+                            <h2 id="conclusion" class="text-center font-weight-bold"
+                                style="margin-top: 20px; margin-bottom: 30px;">Conclusion</h2>
+                            <!-- <div class="d-flex align-items-start">
                                     <div id="barchart" style="flex: 1;"></div>
                                     <div style="flex: 1; margin-top: 40px">
                                         <p class="text-justify">This is an interactive line chart showing the number of traffic infringements from other states in ACT over time.</p>
                                         <p class="text-justify">After the introduction of the 40 kilometers per hour speed limit in parts of Canberra's city center in late June 2021, there was a significant increase in the number of traffic infringements issued. However, the ACT Legislative Assembly inquiry recommended waiving some of the speeding fines incurred during this period, especially for those who faced financial hardship. This decision, along with increased public awareness and better communication about the new speed limits, likely contributed to a reduction in traffic infringements in the following years. Additionally, the government's efforts to improve road safety by expanding the 40 kilometers per hour speed limit areas and implementing the ACT Road Safety Action Plan may have led to better compliance with traffic regulations. As a result, the number of traffic infringements in ACT dropped from 20,493 in 2021 to 7,096 after 2021, reflecting the positive impact of these measures on road safety and driver behavior.</p>
                                     </div>
                                 </div> -->
-                                <div class="row text-justify">
+                            <div class="row text-justify">
                                 <div class="col-md-7">
                                     <div id="barchart"></div>
                                 </div>
                                 <div class="col-md-5">
-                                    <p class="text-justify">After the introduction of the 40 kilometers per hour speed limit in parts of Canberra's city center in late June 2021, there was a significant increase in the number of traffic infringements issued. However, the ACT Legislative Assembly inquiry recommended waiving some of the speeding fines incurred during this period, especially for those who faced financial hardship. This decision, along with increased public awareness and better communication about the new speed limits, likely contributed to a reduction in traffic infringements in the following years. Additionally, the government's efforts to improve road safety by expanding the 40 kilometers per hour speed limit areas and implementing the ACT Road Safety Action Plan may have led to better compliance with traffic regulations. As a result, the number of traffic infringements in ACT dropped from 20,493 in 2021 to 7,096 after 2021, reflecting the positive impact of these measures on road safety and driver behavior.</p>
-                                </div>
-                                <em>This is an interactive line chart showing the number of traffic infringements from other states in ACT over time.</em>
-                                </div>
-                                
-                            </div>
-                            </div>
-                        </div>
-                    </div>                                
-                </div>
-            </div>
-        </div>
-            <!-- <div class="col-12">
-                <div class="card border-0 shadow-lg mb-4 rounded">
-                    <div class="card-header text-center">
-                        Heatmap
-                    </div>
-                    <div class="card-body visualization-container d-flex justify-content-center align-items-center">
-                        <div id="heatmap"></div>
-                    </div>
-                </div>
-            </div>
+                                    <p class="test-justify">The analysis of road offences and accidents in the
+                                        Australian Capital Territory (ACT) reveals a <b>complex interplay between
+                                            traffic
+                                            violations and road safety outcomes</b>, highlighting the ACT's status as
+                                        having the
+                                        highest rate of road offences per capita, attributed to <b>both local
+                                            and interstate drivers</b>. There is a significant increase in road
+                                        infringements
+                                        during peak periods, such as holidays, indicating a link between driver
+                                        behaviour and safety risks, with speeding offences particularly prevalent in
+                                        non-school zones, necessitating targeted enforcement. While a correlation exists
+                                        between increased violations and higher accident risks, the ACT records
+                                        relatively fewer accidents, possibly due to its smaller population and land
+                                        area (source by <a
+                                            href="https://www.statista.com/statistics/991555/number-road-deaths-by-state-australia/">Statista</a>).
+                                        , underlining the importance of promoting responsible driving behaviours. To
+                                        combat high-risk activities like speeding, the ACT government is implementing
+                                        stricter penalties, community education programs, and reinvesting fine revenues
+                                        into road safety initiatives, reflecting a proactive commitment to fostering a
+                                        safer driving environment for all Australians. For more information, check the
+                                        <a href="https://www.act.gov.au/">ACT Government's Road Safety Strategy</a>.
+                                    </p>
 
-            <div class="col-12">
-                <div class="card border-0 shadow-lg mb-4 rounded">
-                    <div class="card-header text-center">
-                        Bubble
-                    </div>
-                    <div class="card-body visualization-container d-flex justify-content-center align-items-center">
-                        <div id="bubble"></div>
+                                </div>
+                                <em>This is an interactive line chart showing the number of traffic infringements from
+                                    other states in ACT over time.</em>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <div class="card border-0 shadow-lg mb-4 rounded">
-                    <div class="card-header text-center">
-                        Treemap
-                    </div>
-                    <div class="card-body visualization-container d-flex justify-content-center align-items-center">
-                        <div id="treemap"></div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
+    </div>
+    </div>
+    </div>
     <footer class="container-fluid footer_section w-100">
-            <div class="card-footer pb-0 text-center footer-text">
-                <p><b>Brian Nge</b></p>
-                <p>Data Visualization 2</p>
-                <p><span class="icon">&#9993;</span>:<a href="mailto:bnge0001@student.monash.com">bnge0001@student.monash.com</a></p>
-                <p><span class="icon">&#128187;</span>:<a href="https://github.com/BrianNge341/FIT3179" target="_blank">BrianNge341/FIT3179</a></p>
-            </div>
-      </footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="card-footer pb-0 text-center footer-text">
+            <p><b>Brian Nge</b></p>
+            <p>Data Visualization 2</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
