@@ -62,7 +62,7 @@
           "lookup": "Rego_State",
           "from": {
             "data": {
-              "url": "datasource\\OffencesMap.CSV",
+              "url": "datasource//OffencesMap.csv",
               "format": {
                 "type": "csv"
               }
