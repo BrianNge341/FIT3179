@@ -30,7 +30,7 @@
     },
     {
       "data": {
-        "url": "datasource//MonthlyAggregatedData.csv",
+        "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/refs/heads/main/datasource/MonthlyAggregatedData.csv",
         "format": {
           "type": "csv"
         }
@@ -62,7 +62,7 @@
           "lookup": "Rego_State",
           "from": {
             "data": {
-              "url": "datasource//OffencesMap.csv",
+              "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/refs/heads/main/datasource/OffencesMap.csv",
               "format": {
                 "type": "csv"
               }
