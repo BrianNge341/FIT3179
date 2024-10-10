@@ -30,7 +30,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/datasource/OffencesMap.csv"
+        "url": "datasource//OffencesMap.csv"
       },
       "transform": [
         {

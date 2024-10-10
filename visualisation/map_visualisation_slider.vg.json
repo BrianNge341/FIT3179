@@ -30,7 +30,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/BrianNge341/FIT3179/main/datasource/MonthlyAggregatedData.csv",
+        "url": "datasource//MonthlyAggregatedData.csv",
         "format": {
           "type": "csv"
         }
