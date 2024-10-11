@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.2.json",
-  "height": 600,
+  "height": 500,
   "width": 1600,
   "data": [
     {
@@ -93,7 +93,7 @@
           "sourceY": {"expr": "scale('y', datum.yc)"},
           "sourceX": {"expr": "scale('x', datum.stack) + bandwidth('x')"},
           "targetY": {"expr": "scale('y', datum.target.yc)"},
-          "targetX": {"expr": "scale('x', datum.stack == 'stk1' ? 'stk2' : 'stk3')"}
+          "targetX": {"expr": "scale('x', datum.stack == 'stk1' ? 'stk2' : 'stk3') + bandwidth('x')"}
         },
         {
           "type": "formula",
