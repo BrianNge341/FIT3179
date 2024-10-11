@@ -2,9 +2,9 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A bar chart showing the total sum of fines for each state.",
     "title": {
-        "text": "Total Sum of Fines for Each State",
+        "text": "Total Sum of Fines (AUD) for Each State",
         "anchor": "middle",
-        "fontSize": 15
+        "fontSize": 16
     },
     "padding": {"right": 50,
                 "left": 50},
@@ -54,13 +54,25 @@
                 "x": {
                     "field": "Rego_State",
                     "type": "nominal",
-                    "title": "State"
+                    "title": "State",
+                    "axis": {
+                        "labelFontSize": 13,
+                        "titleFontSize": 13
+                      }
                 },
                 "y": {
                     "field": "Total_Fines",
                     "type": "quantitative",
-                    "title": "Total Sum of Fines"
-                }
+                    "axis": {
+                        "labelFontSize": 13,
+                        "titleFontSize": 13,
+                        "format": ".2~s"
+                      }
+                },
+                "tooltip": [
+                    {"field": "Rego_State", "type": "nominal", "title": "State"},
+                    {"field": "Total_Fines", "type": "quantitative", "title": "Total Fines (AUD)", "format": "$.2~s"}
+                  ]
             }
         },
         {
@@ -69,7 +81,7 @@
                 "align": "center",
                 "baseline": "bottom",
                 "dy": -5,
-                "fontSize": 10
+                "fontSize": 15
             },
             "encoding": {
                 "x": {
@@ -83,7 +95,7 @@
                 "text": {
                     "field": "Total_Fines",
                     "type": "quantitative",
-                    "format": "$~s"
+                    "format": "$.2~s"
                 }
             }
         },
@@ -107,7 +119,7 @@
                 "y": {
                     "field": "Total_Fines",
                     "type": "quantitative",
-                    "title": "Total Fines (AUD)"
+                    "title": "Total Sum of Fines (AUD)"
                 },
                 "text": {
                     "value":  ["Drivers from NSW contributed to the highest", "amount of fines among interstate drivers"]

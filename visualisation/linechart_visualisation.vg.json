@@ -2,17 +2,17 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Interactive line chart showing the number of penalties across time.",
     "title": {
-      "text": "Number of Traffic Infringements From Other States in Act Over Time",
+      "text": "Number of Traffic Infringements From Other States in ACT Over Time",
       "anchor": "middle",
-      "fontSize": 15
+      "fontSize": 16
     },
-    "width": 600,
+    "width": 650,
     "height": 400,
     "padding": {
       "right": 50,
       "left": 50,
-      "top": 50,
-      "bottom": 50
+      "top": 30,
+      "bottom": 20
     },
     "data": {
           "url": "datasource//MonthlyAggregatedData.csv",
@@ -47,13 +47,19 @@
             "type": "temporal",
             "title": "Month",
             "axis": {
-              "format": "%b %Y"
+              "format": "%b %Y",
+              "labelFontSize": 13,
+              "titleFontSize": 13
             }
           },
           "y": {
             "field": "Sum_Inf_Count",
             "type": "quantitative",
-            "title": "Number of Traffic Infringements"
+            "title": "Number of Traffic Infringements",
+            "axis": {
+                "labelFontSize": 13,  
+                "titleFontSize": 13
+              }
           },
           "color": {
             "field": "Rego_State",
@@ -126,7 +132,8 @@
           "type": "text",
           "align": "left",
           "dx": 5,
-          "dy": -5
+          "dy": -5,
+          "fontSize": 13
         },
         "encoding": {
             "x": {
