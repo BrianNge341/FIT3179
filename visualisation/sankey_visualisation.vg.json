@@ -70,6 +70,11 @@
       ]
     },
     {
+      "name": "intermediateNodes",
+      "source": "nodes",
+      "transform": [{"type": "filter", "expr": "datum.stack == 'stk2'"}]
+    },
+    {
       "name": "destinationNodes",
       "source": "nodes",
       "transform": [{"type": "filter", "expr": "datum.stack == 'stk3'"}]
@@ -81,10 +86,17 @@
         {"type": "filter", "expr": "datum.stack == 'stk1' || datum.stack == 'stk2'"},
         {
           "type": "lookup",
+          "from": "intermediateNodes",
+          "key": "key",
+          "fields": ["key"],
+          "as": ["intermediateTarget"]
+        },
+        {
+          "type": "lookup",
           "from": "destinationNodes",
           "key": "key",
           "fields": ["key"],
-          "as": ["target"]
+          "as": ["destinationTarget"]
         },
         {
           "type": "linkpath",
@@ -92,8 +104,8 @@
           "shape": "diagonal",
           "sourceY": {"expr": "scale('y', datum.yc)"},
           "sourceX": {"expr": "scale('x', datum.stack) + bandwidth('x')"},
-          "targetY": {"expr": "scale('y', datum.target.yc)"},
-          "targetX": {"expr": "scale('x', datum.stack == 'stk1' ? 'stk2' : 'stk3') + bandwidth('x')"}
+          "targetY": {"expr": "scale('y', datum.stack == 'stk1' ? datum.intermediateTarget.yc : datum.destinationTarget.yc)"},
+          "targetX": {"expr": "scale('x', datum.stack == 'stk1' ? 'stk2' : 'stk3')"}
         },
         {
           "type": "formula",
@@ -121,8 +133,6 @@
       "name": "y",
       "type": "linear",
       "range": "height",
-      "nice": true,
-      "zero": true,
       "domain": {"data": "nodes", "field": "y1"}
     },
     {
