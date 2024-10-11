@@ -268,15 +268,23 @@
     },
     {
       "type": "rect",
-      "from": {"data": "nodes"},
+      "from": {"data": "groups"},
       "encode": {
-        "enter": {
-          "stroke": {"value": "#000"},
-          "strokeWidth": {"value": 2},
-          "width": {"scale": "x", "band": 1},
+        "update": {
           "x": {"scale": "x", "field": "stack"},
-          "y": {"field": "y0", "scale": "y"},
-          "y2": {"field": "y1", "scale": "y"}
+          "width": {"scale": "x", "band": 1},
+          "y": {"scale": "y", "field": "scaledY0"},
+          "y2": {"scale": "y", "field": "scaledY1"},
+          "fill": {"scale": "color", "field": "grpId"},
+          "fillOpacity": {"value": 0.75},
+          "strokeWidth": {"value": 1},
+          "stroke": {"scale": "color", "field": "grpId"}
+        },
+        "hover": {
+          "tooltip": {
+            "signal": "{'Group': datum.grpId, 'Total': format(datum.total, ',.0f'), 'Percentage': format(datum.percentage, '.1%')}"
+          },
+          "fillOpacity": {"value": 1}
         }
       }
     }
