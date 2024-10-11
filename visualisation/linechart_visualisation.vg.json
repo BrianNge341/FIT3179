@@ -26,7 +26,7 @@
             "as": "Year"
         },
         {
-            "filter": "datum.Rego_State != 'NAV' && datum.Rego_State != 'ARM' && datum.Rego_State != 'RAF'"
+            "filter": "datum.Rego_State != 'NAV' && datum.Rego_State != 'ARM' && datum.Rego_State != 'RAF' && datum.Rego_State != 'FED'"
         },
         {
             "filter": "isValid(datum.Rego_State) && (datum.Rego_State == StateSelection.Rego_State || StateSelection.Rego_State == null)"
@@ -113,6 +113,39 @@
             "init": {
               "Year": 2021
             }
+          }
+        }
+      },
+      {
+        "transform": [
+            {
+                "filter": "datum.Rego_State == 'ACT' && year(datum.Offence_Month) == '2021' && month(datum.Offence_Month) == 6"
+              }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 5,
+          "dy": -5
+        },
+        "encoding": {
+            "x": {
+                "field": "Offence_Month",
+                "type": "temporal",
+                "title": "Month",
+                "axis": {
+                    "format": "%b %Y"
+                }
+                },
+          "y": {
+            "field": "Sum_Inf_Count",
+            "type": "quantitative"
+          },
+          "text": {
+            "value": "After the Introduction of Speed Limit Changes" 
+          },
+          "color": {
+            "value": "black"
           }
         }
       }
