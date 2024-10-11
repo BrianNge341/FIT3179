@@ -2,79 +2,120 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Interactive line chart showing the number of penalties across time.",
     "title": {
-        "text": "Number of Traffic Infringements From Other States in Act Over Time",
-        "anchor": "middle",
-        "fontSize": 15
+      "text": "Number of Traffic Infringements From Other States in Act Over Time",
+      "anchor": "middle",
+      "fontSize": 15
     },
     "width": 600,
     "height": 400,
-    "padding": {"right": 50,
-                "left": 50,
-                "top": 50,
-                "bottom": 50},
-    "data": {
-        "url": "datasource//MonthlyAggregatedData.csv",
-        "format": {"type": "csv"}
+    "padding": {
+      "right": 50,
+      "left": 50,
+      "top": 50,
+      "bottom": 50
     },
-    "mark": {
-        "type": "line",
-        "point": true
-      },
-    "encoding": {
-        "x": {
+    "data": {
+          "url": "datasource//MonthlyAggregatedData.csv",
+          "format": {
+            "type": "csv"
+          }
+        },
+    "transform": [
+        {
+            "calculate": "year(datum.Offence_Month)",
+            "as": "Year"
+        },
+        {
+            "filter": "datum.Rego_State != 'NAV' && datum.Rego_State != 'ARM' && datum.Rego_State != 'RAF'"
+        },
+        {
+            "filter": "isValid(datum.Rego_State) && (datum.Rego_State == StateSelection.Rego_State || StateSelection.Rego_State == null)"
+        },
+        {
+            "filter": "datum.Year == YearSelection.Year"
+        }
+        ],
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "point": true
+        },
+        "encoding": {
+          "x": {
             "field": "Offence_Month",
             "type": "temporal",
             "title": "Month",
-            "axis": {"format": "%b %Y"}
-        },
-        "y": {
+            "axis": {
+              "format": "%b %Y"
+            }
+          },
+          "y": {
             "field": "Sum_Inf_Count",
             "type": "quantitative",
             "title": "Number of Traffic Infringements"
-        },
-        "color": {
+          },
+          "color": {
             "field": "Rego_State",
             "type": "nominal",
             "title": "State"
+          },
+          "tooltip": [
+            {
+              "field": "Offence_Month",
+              "type": "temporal",
+              "title": "Month",
+              "format": "%b %Y"
+            },
+            {
+              "field": "Rego_State",
+              "type": "nominal",
+              "title": "State"
+            },
+            {
+              "field": "Sum_Inf_Count",
+              "type": "quantitative",
+              "title": "Number of Traffic Infringements"
+            }
+          ]
         },
-        "tooltip": [
-            {"field": "Offence_Month", "type": "temporal", "title": "Month", "format": "%b %Y"},
-            {"field": "Rego_State", "type": "nominal", "title": "State"},
-            {"field": "Sum_Inf_Count", "type": "quantitative", "title": "Number of Traffic Infringements"}
-        ]
-    },
-    "selection": {
-        "StateSelection": {
+        "selection": {
+          "StateSelection": {
             "type": "single",
             "fields": ["Rego_State"],
             "bind": {
-                "input": "select",
-                "options": [
-                    null, "NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"
-                ],
-                "labels": [
-                    "All States", "New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia", "Tasmania", "Northern Territory", "Australian Capital Territory"
-                ],
-                "name": "Select State: "
+              "input": "select",
+              "options": [null, "NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"],
+              "labels": [
+                "All States",
+                "New South Wales",
+                "Victoria",
+                "Queensland",
+                "South Australia",
+                "Western Australia",
+                "Tasmania",
+                "Northern Territory",
+                "Australian Capital Territory"
+              ],
+              "name": "Select State: "
             }
-        },
-        "YearSelection": {
+          },
+          "YearSelection": {
             "type": "single",
             "fields": ["Year"],
             "bind": {
-                "input": "range",
-                "min": 2010,
-                "max": 2024,
-                "step": 1,
-                "name": "Select Year: "
+              "input": "range",
+              "min": 2010,
+              "max": 2024,
+              "step": 1,
+              "name": "Select Year: "
             },
-            "init": {"Year": 2021}
+            "init": {
+              "Year": 2021
+            }
+          }
         }
-    },
-    "transform": [
-        {"calculate": "year(datum.Offence_Month)", "as": "Year"},
-        {"filter": "datum.Rego_State != 'NAV' && datum.Rego_State != 'ARM' && datum.Rego_State != 'RAF'"},
-        {"filter": "isValid(datum.Rego_State) && (datum.Rego_State == StateSelection.Rego_State || StateSelection.Rego_State == null)"},
-        {"filter": "datum.Year == YearSelection.Year"}
+      }
     ]
-}
+  }
+  

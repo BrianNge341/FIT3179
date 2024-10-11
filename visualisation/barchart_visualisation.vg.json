@@ -60,12 +60,6 @@
                     "field": "Total_Fines",
                     "type": "quantitative",
                     "title": "Total Sum of Fines"
-                },
-                "color": {
-                    "field": "Rego_State",
-                    "type": "nominal",
-                    "title": "State",
-                    "legend": {"title": "State"}
                 }
             }
         },
@@ -89,7 +83,7 @@
                 "text": {
                     "field": "Total_Fines",
                     "type": "quantitative",
-                    "format": "$,.2f"
+                    "format": "$~s"
                 }
             }
         },
