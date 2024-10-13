@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A bar chart showing the total sum of fines for each state.",
     "title": {
-      "text": "Total Sum of Fines (AUD) for Each State",
+      "text": "Total Fines (AUD) From Other States in ACT",
       "anchor": "middle",
       "fontSize": 16
     },
