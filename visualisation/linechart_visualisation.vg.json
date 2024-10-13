@@ -6,11 +6,11 @@
       "anchor": "middle",
       "fontSize": 16
     },
-    "width": 650,
+    "width": 600,
     "height": 400,
     "padding": {
-      "right": 50,
-      "left": 50,
+      "right": 30,
+      "left": 30,
       "top": 30,
       "bottom": 20
     },

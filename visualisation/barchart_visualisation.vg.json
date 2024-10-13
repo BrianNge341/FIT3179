@@ -2,145 +2,164 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A bar chart showing the total sum of fines for each state.",
     "title": {
-        "text": "Total Sum of Fines (AUD) for Each State",
-        "anchor": "middle",
-        "fontSize": 16
+      "text": "Total Sum of Fines (AUD) for Each State",
+      "anchor": "middle",
+      "fontSize": 16
     },
-    "padding": {"right": 50,
-                "left": 50},
+    "padding": {
+      "right": 50,
+      "left": 50
+    },
     "width": 800,
     "height": 500,
     "autosize": {
-        "type": "fit",
-        "contains": "padding"
+      "type": "fit",
+      "contains": "padding"
     },
     "data": {
-        "url": "datasource//MonthlyAggregatedData.csv",
-        "format": {
-            "type": "csv"
-        }
+      "url": "datasource//MonthlyAggregatedData.csv",
+      "format": {
+        "type": "csv"
+      }
     },
-    "transform": [
-        {
-            "filter": {
-                "field": "Rego_State",
-                "oneOf": [
-                    "VIC",  
-                    "NT",  
-                    "SA",   
-                    "WA",   
-                    "QLD",  
-                    "NSW", 
-                    "TAS",  
-                    "ACT"  
-                ]
-            }
+    "encoding": {
+        "x": {
+          "field": "Rego_State",
+          "type": "nominal",
+          "title": "State",
+          "sort": {
+            "field": "Total_Fines",
+            "order": "descending"
+          },
+          "axis": {
+            "labelFontSize": 13,
+            "titleFontSize": 13
+          }
         },
-        {
-            "aggregate": [
-                {
-                    "op": "sum",
-                    "field": "Sum_Pen_Amt",
-                    "as": "Total_Fines"
-                }
-            ],
-            "groupby": ["Rego_State"]
+        "y": {
+          "aggregate": "sum",
+          "field": "Total_Fines",
+          "type": "quantitative",
+          "axis": {
+            "labelFontSize": 13,
+            "titleFontSize": 13,
+            "format": ".2~s"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Rego_State",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Total_Fines",
+            "type": "quantitative",
+            "title": "Total Fines (AUD)",
+            "format": "$.2~s"
+          }
+        ]
+      },
+    "transform": [
+      {
+        "filter": {
+          "field": "Rego_State",
+          "oneOf": [
+            "VIC",
+            "NT",
+            "SA",
+            "WA",
+            "QLD",
+            "NSW",
+            "TAS",
+            "ACT"
+          ]
         }
+      },
+      {
+        "aggregate": [
+          {
+            "op": "sum",
+            "field": "Sum_Pen_Amt",
+            "as": "Total_Fines"
+          }
+        ],
+        "groupby": ["Rego_State"]
+      },
+      {
+        "window": [
+          {
+            "op": "rank",
+            "as": "rank"
+          }
+        ],
+        "sort": [
+          {
+            "field": "Total_Fines",
+            "order": "descending"
+          }
+        ]
+      }
     ],
     "layer": [
-        {
-            "mark": "bar",
-            "encoding": {
-                "x": {
-                    "field": "Rego_State",
-                    "type": "nominal",
-                    "title": "State",
-                    "axis": {
-                        "labelFontSize": 13,
-                        "titleFontSize": 13
-                      }
-                },
-                "y": {
-                    "field": "Total_Fines",
-                    "type": "quantitative",
-                    "axis": {
-                        "labelFontSize": 13,
-                        "titleFontSize": 13,
-                        "format": ".2~s"
-                      }
-                },
-                "tooltip": [
-                    {"field": "Rego_State", "type": "nominal", "title": "State"},
-                    {"field": "Total_Fines", "type": "quantitative", "title": "Total Fines (AUD)", "format": "$.2~s"}
-                  ]
-            }
+      {
+        "mark": { "type": "bar", "cornerRadiusEnd": 4 }
+      },
+      {
+        "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "bottom",
+            "dy": -5,
+            "fontSize": 15
         },
-        {
-            "mark": {
-                "type": "text",
-                "align": "center",
-                "baseline": "bottom",
-                "dy": -5,
-                "fontSize": 15
+        "encoding": {
+            "x": {
+                "field": "Rego_State",
+                "type": "nominal"
             },
-            "encoding": {
-                "x": {
-                    "field": "Rego_State",
-                    "type": "nominal"
-                },
-                "y": {
-                    "field": "Total_Fines",
-                    "type": "quantitative"
-                },
-                "text": {
-                    "field": "Total_Fines",
-                    "type": "quantitative",
-                    "format": "$.2~s"
-                }
+            "y": {
+                "field": "Total_Fines",
+                "type": "quantitative"
+            },
+            "text": {
+                "field": "Total_Fines",
+                "type": "quantitative",
+                "format": "$.2~s"
             }
-        },
-        {
-            "mark": {
-                "type": "text",
-                "align": "left",
-                "baseline": "middle",
-                "dx": 5,
-                "dy": -40,
-                "fontSize": 12,
-                "fontWeight": "bold"
-            },
-            "encoding": {
-                "x": {
-                    "field": "Rego_State",
-                    "type": "nominal",
-                    "title": "State",
-                    "axis": {"labelAngle": 0}
-                },
-                "y": {
-                    "field": "Total_Fines",
-                    "type": "quantitative",
-                    "title": "Total Sum of Fines (AUD)"
-                },
-                "text": {
-                    "value":  ["Drivers from NSW contributed to the highest", "amount of fines among interstate drivers"]
-                }
-            },
-            "transform": [
-                {"filter": "datum.Rego_State == 'NSW'"}
-            ]
-        }
-    ],
-    "selection": {
-        "highlight": {
-            "type": "single",
-            "empty": "none",
-            "on": "mouseover",
-            "fields": ["Rego_State"]
         }
     },
-    "config": {
+    {
         "mark": {
-            "tooltip": true
-        }
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 40,
+            "dy": -30,
+            "fontSize": 12,
+            "fontWeight": "bold"
+        },
+        "encoding": {
+            "x": {
+                "field": "Rego_State",
+                "type": "nominal",
+                "title": "State",
+                "axis": {"labelAngle": 0}
+            },
+            "y": {
+                "field": "Total_Fines",
+                "type": "quantitative",
+                "title": "Total Sum of Fines (AUD)"
+            },
+            "text": {
+                "value":  ["Drivers from NSW contributed to the highest", "amount of fines among interstate drivers"]
+            }
+        },
+        "transform": [
+            {"filter": "datum.Rego_State == 'NSW'"}
+        ]
     }
-}
+    
+    ]
+  }
+  
