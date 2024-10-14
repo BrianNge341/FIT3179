@@ -17,8 +17,11 @@
       "filter": "datum.Rego_State != 'NAV' && datum.Rego_State != 'ARM' && datum.Rego_State != 'RAF' && datum.Rego_State != 'FED'"
     }
   ],
-  "width": 400,
+  "width": 300,
   "height": 200,
+  "padding": {
+    "right": 15
+  },
   "mark": "rect",
   "encoding": {
     "x": {
