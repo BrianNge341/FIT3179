@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }).then(function(result) {
     }).catch(console.error);
 
-    // var vg_heatmap = "visualisation/heatmap_visualisation.vg.json";
-    // vegaEmbed("#heatmap", vg_heatmap, {
-    //     renderer: "svg",
-    //     actions: false
-    // }).then(function(result) {
-    // }).catch(console.error);
+    var vg_heatmap = "visualisation/heatmap_visualisation.vg.json";
+    vegaEmbed("#heatmap", vg_heatmap, {
+        renderer: "svg",
+        actions: false
+    }).then(function(result) {
+    }).catch(console.error);
 
     // var vg_sun = "visualisation/sunburst_visualisation.vg.json";
     // vegaEmbed("#sun", vg_sun, {

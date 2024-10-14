@@ -1,46 +1,68 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A heatmap showing the number of offences per state per month.",
-    "data": {
-      "url": "datasource\\heatmap.csv",
-      "format": {
-        "type": "csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A heatmap showing the total sum of penalties per state per year.",
+  "title": {
+    "text": "Difference in Total Fines (AUD) for Different State in ACT",
+    "anchor": "middle",
+    "fontSize": 16
+  },
+  "data": {
+    "url": "datasource\\heatmap.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.Rego_State != 'NAV' && datum.Rego_State != 'ARM' && datum.Rego_State != 'RAF' && datum.Rego_State != 'FED'"
+    }
+  ],
+  "width": 400,
+  "height": 200,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {
+        "labelAngle": -45
       }
     },
-    "width": 1000,
-    "height": 300,
-    "mark": "rect",
-    "encoding": {
-      "x": {
-        "field": "Offence_Month",
-        "type": "ordinal",
-        "title": "Offence Month",
-        "timeUnit": "yearmonth",
-        "axis": {
-          "labelAngle": -45
-        }
+    "y": {
+      "field": "Rego_State",
+      "type": "nominal",
+      "title": "State",
+      "sort": "ascending"
+    },
+    "color": {
+      "aggregate": "sum",
+      "field": "Sum_Pen_Amt",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
       },
-      "y": {
-        "field": "Rego_State",
-        "type": "nominal",
-        "title": "State",
-        "sort": "ascending"
-      },
-      "color": {
+      "legend": {
+        "title": "Total Penalty Amount (AUD)"
+      }
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "Rego_State", "type": "nominal", "title": "State"},
+      {
         "aggregate": "sum",
-        "field": "Sum_Inf_Count",
+        "field": "Sum_Pen_Amt",
         "type": "quantitative",
-        "scale": {
-          "scheme": "blues"
-        },
-        "legend": {
-          "title": "Infraction Count"
-        }
-      },
-      "tooltip": [
-        {"field": "Offence_Month", "type": "ordinal", "title": "Offence Month"},
-        {"field": "Rego_State", "type": "nominal", "title": "State"},
-        {"aggregate": "sum", "field": "Sum_Inf_Count", "type": "quantitative", "title": "Infraction Count"}
-      ]
+        "title": "Total Penalty Amount (AUD)",
+        "format": ".2~s"
+      }
+    ]
+  },
+  "config": {
+    "axis": {
+      "grid": true,
+      "tickBand": "extent",
+      "gridColor": "black"
     }
   }
+}
